@@ -19,7 +19,7 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Sunday, November 3, 2024 @ 11:40:07 ET
+ *  Date: Sunday, November 3, 2024 @ 11:41:43 ET
  *  By: bryancasler
  *  ENGrid styles: v0.19.9
  *  ENGrid scripts: v0.19.1
@@ -7685,7 +7685,7 @@ body[data-engrid-debug]:before{
   font-style:italic;
   src:url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1874/gotham-bolditalic-webfont.woff2) format("woff2");
 }
-[data-engrid-sub-theme=npca]{
+[data-engrid-theme=npca]{
   --default_color:#494949;
   --default_font-size:16px;
   --root_font-size:16px;
