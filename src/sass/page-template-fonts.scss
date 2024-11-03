@@ -21,3 +21,18 @@
 // 	font-style: normal;
 // 	font-display: swap
 // }
+
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1874/gotham-bold-webfont.woff2') format('woff2'); /* Modern Browsers */
+    font-style: normal;
+    font-display: swap
+ }
+
+ @font-face {
+    font-family: 'Gotham';
+    src: url('https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1874/gotham-bolditalic-webfont.woff2') format('woff2'); /* Modern Browsers */
+    font-style: italic;
+    font-display: swap
+ }

@@ -1,7 +1,32 @@
 // The most broadly used CSS Custom Properties for quick theming.
 // Uncomment to use and reference engrid-scrips SASS files for more CSS Custom Properties.
 // All CSS Custom Properties should be scoped to the theme using CSS Data Attributes.
-[data-engrid-theme="organizational-name"] {
+[data-engrid-sub-theme="npca"] {
+  --default_color: #494949; 
+  --default_font-size: 16px; 
+  --root_font-size: 16px;
+  --default_font-family: 'Gotham', sans-serif;
+  --a_color: #00704a;
+  --h1_font-family: 'Gotham', sans-serif;
+  --h1_color: #00704a;
+  --h2_font-family: 'Gotham', sans-serif;
+  --h3_font-family: 'Gotham', sans-serif;
+  --h4_font-family: 'Gotham', sans-serif;
+  --submit__button_color: #ffffff;
+  --button_background-color: #7f7266;
+  --button_background-color_hover: #00704a;
+  --button_border-radius: 5px;
+  --recurring-payment__button_background-color_checked: #00704a;
+  --recurring-payment__button_border-color_checked: #00704a;
+  --donation-amount__button_background-color_checked: #00704a;
+  --donation-amount__button_border-color_checked: #00704a;
+  --recurring-frequency__button_background-color_checked: #00704a;
+  --recurring-frequency__button_border-color_checked: #00704a;
+  --engrid__page_background-color: #ffffff;
+  --pagebuilder__background-color: #ffffff;
+  --donation-amount__button_count: 3;
+
+
   // TYPOGRAPHY DEFAULT
   // --default_font-family: var(--native-fonts__sans-serif);
   // --default_color: initial;
