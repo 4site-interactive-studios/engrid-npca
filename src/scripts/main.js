@@ -1,6 +1,6 @@
 import tippy from "tippy.js";
 
-export const customScript = function () {
+export const customScript = function (App) {
 // Add your client scripts here
 
 // Transaction fee tooltip

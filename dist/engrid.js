@@ -17,7 +17,7 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Sunday, November 3, 2024 @ 12:19:03 ET
+ *  Date: Sunday, November 3, 2024 @ 12:33:02 ET
  *  By: bryancasler
  *  ENGrid styles: v0.19.9
  *  ENGrid scripts: v0.19.14
@@ -21430,7 +21430,7 @@ const AppVersion = "0.19.14";
 var tippy_esm = __webpack_require__(9244);
 ;// CONCATENATED MODULE: ./src/scripts/main.js
 
-const customScript = function () {
+const customScript = function (App) {
   // Add your client scripts here
 
   // Transaction fee tooltip
