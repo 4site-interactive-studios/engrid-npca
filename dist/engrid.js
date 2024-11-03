@@ -17,7 +17,7 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Sunday, November 3, 2024 @ 11:47:13 ET
+ *  Date: Sunday, November 3, 2024 @ 11:51:40 ET
  *  By: bryancasler
  *  ENGrid styles: v0.19.9
  *  ENGrid scripts: v0.19.1
@@ -21050,13 +21050,12 @@ const AppVersion = "0.19.1";
 const customScript = function (App) {
   console.log("ENGrid client scripts are executing");
   // Add your client scripts here
-
-  App.setBodydata("client-js-loading", "finished");
 };
 ;// CONCATENATED MODULE: ./src/index.ts
  // Uses ENGrid via NPM
 // import { Options, App } from "../../engrid-scripts/packages/common"; // Uses ENGrid via Visual Studio Workspace
 
+document.getElementsByTagName("body")[0].setAttribute("data-engrid-client-js-loading", "started");
 
 
 const options = {
@@ -21075,6 +21074,7 @@ const options = {
   onResize: () => console.log("Starter Theme Window Resized")
 };
 new App(options);
+document.getElementsByTagName("body")[0].setAttribute("data-engrid-client-js-loading", "finished");
 })();
 
 /******/ })()
