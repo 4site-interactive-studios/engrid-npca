@@ -17,7 +17,7 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Sunday, November 3, 2024 @ 11:51:40 ET
+ *  Date: Sunday, November 3, 2024 @ 12:11:34 ET
  *  By: bryancasler
  *  ENGrid styles: v0.19.9
  *  ENGrid scripts: v0.19.1
@@ -21046,16 +21046,38 @@ const AppVersion = "0.19.1";
 // Version
 
 
+// EXTERNAL MODULE: ./node_modules/tippy.js/dist/tippy.esm.js + 54 modules
+var tippy_esm = __webpack_require__(9244);
 ;// CONCATENATED MODULE: ./src/scripts/main.js
-const customScript = function (App) {
-  console.log("ENGrid client scripts are executing");
+
+const customScript = function () {
   // Add your client scripts here
+
+  // Transaction fee tooltip
+  function addTransactionFeeTooltip() {
+    const transactionFeeEl = document.querySelector(".transaction-fee-opt-in .en__field__element--checkbox");
+    if (!transactionFeeEl) return;
+    const transactionFeeTooltip = document.createElement("div");
+    transactionFeeTooltip.classList.add("transaction-fee-tooltip");
+    transactionFeeTooltip.innerHTML = "i";
+    transactionFeeEl.appendChild(transactionFeeTooltip);
+    (0,tippy_esm/* default */.Ay)(transactionFeeTooltip, {
+      content: "By checking this box, you agree to cover the transaction fee for your donation. This small additional amount helps us ensure that 100% of you donation goes directly to NPCA.",
+      allowHTML: true,
+      theme: "white",
+      placement: "top",
+      trigger: "mouseenter click",
+      interactive: true,
+      arrow: "<div class='custom-tooltip-arrow'></div>",
+      offset: [0, 20]
+    });
+  }
+  addTransactionFeeTooltip();
 };
 ;// CONCATENATED MODULE: ./src/index.ts
  // Uses ENGrid via NPM
 // import { Options, App } from "../../engrid-scripts/packages/common"; // Uses ENGrid via Visual Studio Workspace
 
-document.getElementsByTagName("body")[0].setAttribute("data-engrid-client-js-loading", "started");
 
 
 const options = {
@@ -21074,7 +21096,6 @@ const options = {
   onResize: () => console.log("Starter Theme Window Resized")
 };
 new App(options);
-document.getElementsByTagName("body")[0].setAttribute("data-engrid-client-js-loading", "finished");
 })();
 
 /******/ })()
