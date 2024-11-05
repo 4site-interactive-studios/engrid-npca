@@ -7,11 +7,12 @@
   --color-dark-gray: #494949;
   --color-light-gray: #999999;
 
+  --color_primary: var(--color-green);
+
   --default_color: var(--color_dark-gray);
   --default_font-size: 16px;
   --root_font-size: 16px;
   --default_font-family: "Gotham", sans-serif;
-  --a_color: var(--color-green);
   --submit__button_color: #ffffff;
   --submit__button_background-color: #045237;
   --submit__button_font-size: 1.5rem;
@@ -30,6 +31,8 @@
   --donation-amount__button_count: 3;
   --engrid__body-headerOutside_background-color: #ffffff;
   --engrid__content-footer_background-color: #ffffff;
+
+  --engrid__body_box-shadow: none;
 
   // TYPOGRAPHY DEFAULT
   // --default_font-family: var(--native-fonts__sans-serif);
@@ -83,8 +86,9 @@
 
   // TYPOGRAPHY A
   // --a_font-family: var(--default_font-family);
-  // --a_color: initial;
-  // --a_text-decoration: underline;
+  --a_color: var(--color-green);
+  --a_text-decoration: none;
+  --a_text-decoration_hover: underline;
 
   // TYPOGRAPHY A:FOCUS
   // TYPOGRAPHY A:HOVER
@@ -357,11 +361,11 @@
 
   // Example Breakpoints Stylings (See engrid-scripts > _engrid-breakpoints.scss for more breakpoints)
   &[data-engrid-layout] {
-    @media (max-width: 425px) {
+    @media (max-width: 480px) {
       @include until-mobile-l;
     }
 
-    @media (min-width: 426px) {
+    @media (min-width: 481px) {
       @include from-mobile-l;
     }
   }
