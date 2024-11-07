@@ -140,7 +140,20 @@
   // DONATION PAGE
   // --give-monthly-donation-amount-appended-label: "/mo";
   // --give-annual-donation-amount-appended-label: "/yr";
-  --recurring-frequency__button_count: 2;
+  // --recurring-frequency__button_count: 3;
+  &[data-engrid-visible-frequency="4"] {
+    --recurring-frequency__button_count: 4;
+  }
+  &[data-engrid-visible-frequency="3"] {
+    --recurring-frequency__button_count: 3;
+  }
+  &[data-engrid-visible-frequency="2"] {
+    --recurring-frequency__button_count: 2;
+  }
+  &[data-engrid-visible-frequency="1"] {
+    --recurring-frequency__button_count: 1;
+  }
+
   // --donation-amount__button_count: 4;
   --give-by-select__button_count: 3;
   --give-by-select__button_background-color: #f5f5f5;
@@ -148,6 +161,21 @@
   --give-by-select__button_color: var(--color_dark-gray);
   --give-by-select__button_font-size: 1rem;
   --give-by-select__button_font-weight: 700;
+
+  // Exit Intent
+  --exit-intent__container_box-shadow: 0 2px 4px #06734e;
+  --exit-intent__container_outline: 5px solid #06734e;
+  --exit-intent__button_font-size: 1.3rem;
+  --exit-intent__button_padding: var(--button_padding);
+  --exit-intent__button_padding-bottom: var(--submit__button_padding-bottom);
+  --exit-intent__button_padding-top: var(--submit__button_padding-top);
+  --exit-intent__button_background-color: var(
+    --submit__button_background-color
+  );
+  --exit-intent__button_color: var(--submit__button_color);
+  --exit-intent__button_border-radius: var(--button_border-radius);
+  --exit-intent__button_border-color: var(--button_border-color);
+  --exit-intent__button_border-width: var(--button_border-width);
 }
 
 /* Add your custom theme styles here */
@@ -155,14 +183,12 @@
   .content-footer {
     grid-column: bc;
   }
-
   .monthly-donation-suggestion {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     position: relative;
     z-index: 999;
     margin-top: -30px;
-    border-radius: 5px;
     width: 100%;
     text-align: center;
     padding: 0;
@@ -173,30 +199,58 @@
       color: #00704a;
       font-style: italic;
       text-align: left;
-      width: 300px;
+      width: 90%;
       margin: 0;
-      padding-right: 30px;
-      &::after {
-        content: url('data:image/svg+xml,<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="%2300704a"><path d="M307 34.8c-11.5 5.1-19 16.6-19 29.2v64H176C78.8 128 0 206.8 0 304C0 417.3 81.5 467.9 100.2 478.1c2.5 1.4 5.3 1.9 8.1 1.9c10.9 0 19.7-8.9 19.7-19.7c0-7.5-4.3-14.4-9.8-19.5C108.8 431.9 96 414.4 96 384c0-53 43-96 96-96h96v64c0 12.6 7.4 24.1 19 29.2s25 3 34.4-5.4l160-144c6.7-6.1 10.6-14.7 10.6-23.8s-3.8-17.7-10.6-23.8l-160-144c-9.4-8.5-22.9-10.6-34.4-5.4z"></path></svg>');
-        width: 40px;
-        fill: #00704a;
-        position: absolute;
-        top: 0px;
-        right: 10px;
-        transform: rotate(90deg);
-        margin-left: 8px;
-        margin-bottom: -24px;
+    }
+    &.desktop-hide {
+      margin-bottom: 15px;
+    }
+    &.mobile-hide {
+      justify-content: flex-end;
+      p {
+        width: 300px;
+        padding-right: 30px;
+        &::after {
+          content: url('data:image/svg+xml,<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="%2300704a"><path d="M307 34.8c-11.5 5.1-19 16.6-19 29.2v64H176C78.8 128 0 206.8 0 304C0 417.3 81.5 467.9 100.2 478.1c2.5 1.4 5.3 1.9 8.1 1.9c10.9 0 19.7-8.9 19.7-19.7c0-7.5-4.3-14.4-9.8-19.5C108.8 431.9 96 414.4 96 384c0-53 43-96 96-96h96v64c0 12.6 7.4 24.1 19 29.2s25 3 34.4-5.4l160-144c6.7-6.1 10.6-14.7 10.6-23.8s-3.8-17.7-10.6-23.8l-160-144c-9.4-8.5-22.9-10.6-34.4-5.4z"></path></svg>');
+          width: 40px;
+          fill: #00704a;
+          position: absolute;
+          top: 0px;
+          right: 10px;
+          transform: rotate(90deg);
+          margin-left: 8px;
+          margin-bottom: -24px;
+        }
+        &::before {
+          content: url('data:image/svg+xml,<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="%23FFFFFF"><path d="M307 34.8c-11.5 5.1-19 16.6-19 29.2v64H176C78.8 128 0 206.8 0 304C0 417.3 81.5 467.9 100.2 478.1c2.5 1.4 5.3 1.9 8.1 1.9c10.9 0 19.7-8.9 19.7-19.7c0-7.5-4.3-14.4-9.8-19.5C108.8 431.9 96 414.4 96 384c0-53 43-96 96-96h96v64c0 12.6 7.4 24.1 19 29.2s25 3 34.4-5.4l160-144c6.7-6.1 10.6-14.7 10.6-23.8s-3.8-17.7-10.6-23.8l-160-144c-9.4-8.5-22.9-10.6-34.4-5.4z"></path></svg>');
+          width: 52px;
+          fill: #fff;
+          position: absolute;
+          top: -10px;
+          right: 5px;
+          transform: rotate(90deg);
+          margin-left: 8px;
+          margin-bottom: -24px;
+        }
       }
-      &::before {
-        content: url('data:image/svg+xml,<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="%23FFFFFF"><path d="M307 34.8c-11.5 5.1-19 16.6-19 29.2v64H176C78.8 128 0 206.8 0 304C0 417.3 81.5 467.9 100.2 478.1c2.5 1.4 5.3 1.9 8.1 1.9c10.9 0 19.7-8.9 19.7-19.7c0-7.5-4.3-14.4-9.8-19.5C108.8 431.9 96 414.4 96 384c0-53 43-96 96-96h96v64c0 12.6 7.4 24.1 19 29.2s25 3 34.4-5.4l160-144c6.7-6.1 10.6-14.7 10.6-23.8s-3.8-17.7-10.6-23.8l-160-144c-9.4-8.5-22.9-10.6-34.4-5.4z"></path></svg>');
-        width: 52px;
-        fill: #fff;
-        position: absolute;
-        top: -8px;
-        right: 5px;
-        transform: rotate(90deg);
-        margin-left: 8px;
-        margin-bottom: -24px;
+    }
+  }
+  &[data-engrid-visible-frequency="3"] {
+    .monthly-donation-suggestion.mobile-hide {
+      p {
+        padding-right: 0;
+        padding-left: 30px;
+        text-align: right;
+        &::after {
+          right: auto;
+          left: -10px;
+          transform: scaleX(-1) rotate(90deg);
+        }
+        &::before {
+          right: auto;
+          left: -15px;
+          transform: scaleX(-1) rotate(90deg);
+        }
       }
     }
   }
@@ -342,6 +396,12 @@
 
   @mixin until-mobile-l {
     // STYLES
+    .mobile-hide {
+      display: none !important;
+    }
+    &[data-engrid-visible-frequency="3"] {
+      --recurring-frequency__button_count: 1;
+    }
     .radio-to-buttons_donationAmt {
       --donation-amount__button_count: 2;
     }
@@ -353,6 +413,9 @@
 
   @mixin from-mobile-l {
     // STYLES
+    .desktop-hide {
+      display: none !important;
+    }
   }
 
   @mixin simplified-header {
@@ -361,11 +424,11 @@
 
   // Example Breakpoints Stylings (See engrid-scripts > _engrid-breakpoints.scss for more breakpoints)
   &[data-engrid-layout] {
-    @media (max-width: 480px) {
+    @media (max-width: 520px) {
       @include until-mobile-l;
     }
 
-    @media (min-width: 481px) {
+    @media (min-width: 521px) {
       @include from-mobile-l;
     }
   }
@@ -380,6 +443,17 @@
   &[data-engrid-layout="centerright1col"] {
     @media screen and (max-width: $centerright1col_content-column_min-width) {
       @include simplified-header;
+    }
+  }
+  #en__pagebuilder,
+  &[data-engrid-debug],
+  #en__pagebuilder {
+    .mobile-show,
+    .desktop-show,
+    .mobile-hide,
+    .desktop-hide {
+      display: block !important;
+      background-color: #0000ff1a !important;
     }
   }
 }
