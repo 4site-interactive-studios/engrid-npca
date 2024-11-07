@@ -183,12 +183,16 @@
   .content-footer {
     grid-column: bc;
   }
+  &:not(#en__pagebuilder) {
+    .monthly-donation-suggestion {
+      margin-top: -30px;
+    }
+  }
   .monthly-donation-suggestion {
     display: flex;
     justify-content: center;
     position: relative;
     z-index: 999;
-    margin-top: -30px;
     width: 100%;
     text-align: center;
     padding: 0;
@@ -253,6 +257,15 @@
         }
       }
     }
+  }
+
+  // FREQUENCY STYLES
+  .radio-to-buttons_recurrfreq
+    .en__field--recurrfreq.en__field--radio
+    .en__field__item
+    input[type="radio"]
+    + label {
+    white-space: nowrap;
   }
 
   // GIVE BY SELECT STYLES
@@ -396,25 +409,27 @@
 
   @mixin until-mobile-l {
     // STYLES
-    .mobile-hide {
-      display: none !important;
+    &:not(#en__pagebuilder) {
+      .mobile-hide {
+        display: none !important;
+      }
+      .monthly-donation-suggestion {
+        margin-top: -5px;
+      }
     }
+
     &[data-engrid-visible-frequency="3"] {
       --recurring-frequency__button_count: 1;
     }
-    .radio-to-buttons_donationAmt {
-      --donation-amount__button_count: 2;
-    }
     --h1_font-size: 2rem;
-    .monthly-donation-suggestion {
-      margin-top: -5px;
-    }
   }
 
   @mixin from-mobile-l {
     // STYLES
-    .desktop-hide {
-      display: none !important;
+    &:not(#en__pagebuilder) {
+      .desktop-hide {
+        display: none !important;
+      }
     }
   }
 
@@ -424,11 +439,11 @@
 
   // Example Breakpoints Stylings (See engrid-scripts > _engrid-breakpoints.scss for more breakpoints)
   &[data-engrid-layout] {
-    @media (max-width: 520px) {
+    @media (max-width: 530px) {
       @include until-mobile-l;
     }
 
-    @media (min-width: 521px) {
+    @media (min-width: 531px) {
       @include from-mobile-l;
     }
   }
@@ -448,11 +463,8 @@
   #en__pagebuilder,
   &[data-engrid-debug],
   #en__pagebuilder {
-    .mobile-show,
-    .desktop-show,
     .mobile-hide,
     .desktop-hide {
-      display: block !important;
       background-color: #0000ff1a !important;
     }
   }
