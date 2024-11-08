@@ -176,6 +176,9 @@
   --exit-intent__button_border-radius: var(--button_border-radius);
   --exit-intent__button_border-color: var(--button_border-color);
   --exit-intent__button_border-width: var(--button_border-width);
+
+  --premium__image_max-height: 100px;
+  --maximize_my_donation_image: url(https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10104/premium-image.jpeg?v=1731096250000);
 }
 
 /* Add your custom theme styles here */
@@ -208,6 +211,9 @@
     }
     &.desktop-hide {
       margin-bottom: 15px;
+      p {
+        text-align: center;
+      }
     }
     &.mobile-hide {
       justify-content: flex-end;
@@ -390,6 +396,166 @@
       }
     }
   }
+  // PREMIUM STYLES
+  .en__component--premiumgiftblock {
+    --h2_font-size: 22px;
+
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    margin-bottom: 0;
+
+    // [data-engrid-premium-gift-maximize="true"]
+    .en__pgList {
+      --h2_font-size: 20px;
+      --h2_font-weight: 400;
+      @media screen and (max-width: 600px) {
+        --h2_font-size: 18px;
+      }
+    }
+
+    .en__pgList {
+      margin-bottom: 0.75rem;
+    }
+
+    .en__pg__display,
+    .en__pg__images {
+      background-color: #fff;
+      border-radius: var(--button_border-radius);
+      overflow: hidden;
+      min-height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .en__pg__name {
+      margin-bottom: 0px;
+    }
+
+    .en__pg__description {
+      --p_font-size: 16px;
+      --p_line-height: 1.4;
+      max-width: 238px;
+    }
+
+    // Styles the Maximize my gift option
+    // @TODO: See if there is a way to apply this only when there is a maximize my gift option.
+    [data-nogift] .en__pg:last-child .en__pg__description {
+      font-size: 20px;
+      line-height: 1.4;
+      font-weight: var(--h2_font-weight);
+
+      &:after {
+        font-size: 16px;
+        line-height: 1.4;
+      }
+      @media screen and (max-width: 600px) {
+        font-size: 18px;
+      }
+    }
+  }
+  .en__pgList {
+    --radio_height: 20px;
+    --radio_width: 20px;
+    --radio_box-shadow_selected: inset 0 0 0 3px #ffffff;
+    --radio_border-width: 1px;
+
+    // When the no gift option is present, move it from the last premium option to being the first premium option
+    &[data-nogift] {
+      display: grid;
+
+      .en__pg:last-child {
+        grid-row: 1 / 2;
+
+        .en__pg__display {
+          background-image: var(--maximize_my_donation_image);
+          // background-image: url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10114/donation-gift_maximize-my-gift-placeholder.jpg?v=1680364148000");
+          background-size: contain;
+          // min-width: 100%; // Causing this overlay issue on Safari https://cln.sh/mGf3gcGc
+          background-position: center;
+          background-repeat: no-repeat;
+          background-color: #3e3938;
+          border-radius: var(--button_border-radius);
+
+          @media screen and (max-width: 628px) {
+            background-position: left center;
+          }
+        }
+      }
+    }
+    .en__pg {
+      border: var(--donation-amount__button_border-width) solid transparent;
+      overflow: hidden;
+      &:hover {
+        --premium__item_background-color: var(
+          --give-by-select__button_background-color
+        );
+      }
+    }
+
+    .en__pg--selected {
+      --premium__item_background-color: var(
+        --give-by-select__button_background-color
+      );
+      border: var(--donation-amount__button_border-width) solid
+        var(--donation-amount__button_border-color);
+      border-radius: var(--donation-amount__button_border-radius);
+    }
+
+    .en__pg__body {
+      grid-template-areas: "en__pg__select en__pg__display en__pg__detail" ". en__pg__detail-mobile .";
+      grid-template-columns: min-content var(--premium__image_max-width) auto;
+      gap: 0 max(calc(var(--fields_spacing-inline) * 2), 0.5rem);
+      padding: calc(var(--fields_spacing-block))
+        calc(var(--fields_spacing-inline) * 2);
+      .en__pg__select {
+        display: none;
+      }
+      .en__pg__image:hover {
+        transform: none;
+        margin: 0 !important;
+        position: relative;
+      }
+    }
+
+    // Move premium images on mobile
+    @media screen and (max-width: $centercenter1col_body-column_max-width) {
+      .en__pg__description {
+        --p_font-size: 12px;
+        --p_line-height: 18px;
+      }
+      .en__pg__display {
+        grid-area: en__pg__display;
+
+        .en__pg__images img {
+          min-width: auto;
+          margin-left: 0;
+          margin-top: 0.5rem;
+        }
+      }
+
+      // Hide unselected premium images on mobile
+      .en__pg {
+        .en__pg__body {
+          padding: 5px;
+          --premium__image_max-width: 65px;
+          grid-template-columns: min-content var(--premium__image_max-width) auto;
+        }
+      }
+    }
+
+    .en__pg__detail {
+      margin-bottom: 4px;
+    }
+
+    .en__pg__optionType select {
+      --select_padding: 1.2ch 1.6ch;
+      --select_font-size: 16px;
+      --select_line-height: 24px;
+      margin-top: calc(var(--fields_spacing-inline) * 0.5);
+    }
+  }
 
   @media screen and (min-width: 879px) {
     &:not(#en__pagebuilder)[data-engrid-layout="leftleft1col"] {
@@ -409,6 +575,9 @@
 
   @mixin until-mobile-l {
     // STYLES
+    .en__component--premiumgiftblock .en__pg__description {
+      max-width: 100%;
+    }
     &:not(#en__pagebuilder) {
       .mobile-hide {
         display: none !important;

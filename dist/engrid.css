@@ -19,7 +19,7 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Thursday, November 7, 2024 @ 17:22:30 ET
+ *  Date: Friday, November 8, 2024 @ 16:31:27 ET
  *  By: fernando
  *  ENGrid styles: v0.19.16
  *  ENGrid scripts: v0.19.14
@@ -7802,6 +7802,8 @@ body[data-engrid-debug]:before{
   --exit-intent__button_border-radius:var(--button_border-radius);
   --exit-intent__button_border-color:var(--button_border-color);
   --exit-intent__button_border-width:var(--button_border-width);
+  --premium__image_max-height:100px;
+  --maximize_my_donation_image:url(https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10104/premium-image.jpeg?v=1731096250000);
 }
 [data-engrid-theme=npca][data-engrid-visible-frequency="4"]{
   --recurring-frequency__button_count:4;
@@ -7842,6 +7844,9 @@ body[data-engrid-debug]:before{
 }
 [data-engrid-theme=npca] .monthly-donation-suggestion.desktop-hide{
   margin-bottom:15px;
+}
+[data-engrid-theme=npca] .monthly-donation-suggestion.desktop-hide p{
+  text-align:center;
 }
 [data-engrid-theme=npca] .monthly-donation-suggestion.mobile-hide{
   justify-content:flex-end;
@@ -7982,6 +7987,136 @@ body[data-engrid-debug]:before{
 [data-engrid-theme=npca] .tippy-box[data-theme~=white][data-placement=bottom] .custom-tooltip-arrow{
   transform:rotate(-135deg) translateY(2px);
 }
+[data-engrid-theme=npca] .en__component--premiumgiftblock{
+  --h2_font-size:22px;
+  border-bottom:0;
+  border-left:0;
+  border-right:0;
+  margin-bottom:0;
+}
+[data-engrid-theme=npca] .en__component--premiumgiftblock .en__pgList{
+  --h2_font-size:20px;
+  --h2_font-weight:400;
+}
+@media screen and (max-width:600px){
+  [data-engrid-theme=npca] .en__component--premiumgiftblock .en__pgList{
+    --h2_font-size:18px;
+  }
+}
+[data-engrid-theme=npca] .en__component--premiumgiftblock .en__pgList{
+  margin-bottom:.75rem;
+}
+[data-engrid-theme=npca] .en__component--premiumgiftblock .en__pg__display,[data-engrid-theme=npca] .en__component--premiumgiftblock .en__pg__images{
+  align-items:center;
+  background-color:#fff;
+  border-radius:var(--button_border-radius);
+  display:flex;
+  justify-content:center;
+  min-height:80px;
+  overflow:hidden;
+}
+[data-engrid-theme=npca] .en__component--premiumgiftblock .en__pg__name{
+  margin-bottom:0;
+}
+[data-engrid-theme=npca] .en__component--premiumgiftblock .en__pg__description{
+  --p_font-size:16px;
+  --p_line-height:1.4;
+  max-width:238px;
+}
+[data-engrid-theme=npca] .en__component--premiumgiftblock [data-nogift] .en__pg:last-child .en__pg__description{
+  font-size:20px;
+  font-weight:var(--h2_font-weight);
+  line-height:1.4;
+}
+[data-engrid-theme=npca] .en__component--premiumgiftblock [data-nogift] .en__pg:last-child .en__pg__description:after{
+  font-size:16px;
+  line-height:1.4;
+}
+@media screen and (max-width:600px){
+  [data-engrid-theme=npca] .en__component--premiumgiftblock [data-nogift] .en__pg:last-child .en__pg__description{
+    font-size:18px;
+  }
+}
+[data-engrid-theme=npca] .en__pgList{
+  --radio_height:20px;
+  --radio_width:20px;
+  --radio_box-shadow_selected:inset 0 0 0 3px #fff;
+  --radio_border-width:1px;
+}
+[data-engrid-theme=npca] .en__pgList[data-nogift]{
+  display:grid;
+}
+[data-engrid-theme=npca] .en__pgList[data-nogift] .en__pg:last-child{
+  grid-row:1 /  2;
+}
+[data-engrid-theme=npca] .en__pgList[data-nogift] .en__pg:last-child .en__pg__display{
+  background-color:#3e3938;
+  background-image:var(--maximize_my_donation_image);
+  background-position:50%;
+  background-repeat:no-repeat;
+  background-size:contain;
+  border-radius:var(--button_border-radius);
+}
+@media screen and (max-width:628px){
+  [data-engrid-theme=npca] .en__pgList[data-nogift] .en__pg:last-child .en__pg__display{
+    background-position:0;
+  }
+}
+[data-engrid-theme=npca] .en__pgList .en__pg{
+  border:var(--donation-amount__button_border-width) solid #0000;
+  overflow:hidden;
+}
+[data-engrid-theme=npca] .en__pgList .en__pg--selected,[data-engrid-theme=npca] .en__pgList .en__pg:hover{
+  --premium__item_background-color:var(
+    --give-by-select__button_background-color
+  );
+}
+[data-engrid-theme=npca] .en__pgList .en__pg--selected{
+  border:var(--donation-amount__button_border-width) solid var(--donation-amount__button_border-color);
+  border-radius:var(--donation-amount__button_border-radius);
+}
+[data-engrid-theme=npca] .en__pgList .en__pg__body{
+  gap:0 max(var(--fields_spacing-inline) * 2, .5rem);
+  grid-template-areas:"en__pg__select en__pg__display en__pg__detail" ". en__pg__detail-mobile .";
+  grid-template-columns:min-content var(--premium__image_max-width) auto;
+  padding:calc(var(--fields_spacing-block)) calc(var(--fields_spacing-inline)*2);
+}
+[data-engrid-theme=npca] .en__pgList .en__pg__body .en__pg__select{
+  display:none;
+}
+[data-engrid-theme=npca] .en__pgList .en__pg__body .en__pg__image:hover{
+  margin:0 !important;
+  position:relative;
+  transform:none;
+}
+@media screen and (max-width:680px){
+  [data-engrid-theme=npca] .en__pgList .en__pg__description{
+    --p_font-size:12px;
+    --p_line-height:18px;
+  }
+  [data-engrid-theme=npca] .en__pgList .en__pg__display{
+    grid-area:en__pg__display;
+  }
+  [data-engrid-theme=npca] .en__pgList .en__pg__display .en__pg__images img{
+    margin-left:0;
+    margin-top:.5rem;
+    min-width:auto;
+  }
+  [data-engrid-theme=npca] .en__pgList .en__pg .en__pg__body{
+    --premium__image_max-width:65px;
+    grid-template-columns:min-content var(--premium__image_max-width) auto;
+    padding:5px;
+  }
+}
+[data-engrid-theme=npca] .en__pgList .en__pg__detail{
+  margin-bottom:4px;
+}
+[data-engrid-theme=npca] .en__pgList .en__pg__optionType select{
+  --select_padding:1.2ch 1.6ch;
+  --select_font-size:16px;
+  --select_line-height:24px;
+  margin-top:calc(var(--fields_spacing-inline)*.5);
+}
 @media screen and (min-width:879px){
   [data-engrid-theme=npca]:not(#en__pagebuilder)[data-engrid-layout=leftleft1col] .page-backgroundImage{
     grid-column:rpc /  pc;
@@ -7996,6 +8131,9 @@ body[data-engrid-debug]:before{
 @media (max-width:530px){
   [data-engrid-theme=npca][data-engrid-layout]{
     --h1_font-size:2rem;
+  }
+  [data-engrid-theme=npca][data-engrid-layout] .en__component--premiumgiftblock .en__pg__description{
+    max-width:100%;
   }
   [data-engrid-theme=npca][data-engrid-layout]:not(#en__pagebuilder) .mobile-hide{
     display:none !important;
