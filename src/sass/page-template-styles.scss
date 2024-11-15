@@ -177,6 +177,9 @@
   --exit-intent__button_border-color: var(--button_border-color);
   --exit-intent__button_border-width: var(--button_border-width);
 
+  --radio_border-color: #545454;
+  --checkbox_border-color: #545454;
+
   --premium__image_max-height: 100px;
   --maximize_my_donation_image: url(https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10104/premium-image.jpeg?v=1731096250000);
 }
@@ -185,6 +188,7 @@
 [data-engrid-theme="npca"] {
   .content-footer {
     grid-column: bc;
+    z-index: 3 !important;
   }
   &:not(#en__pagebuilder) {
     .monthly-donation-suggestion {
@@ -306,14 +310,13 @@
     max-height: 65px;
   }
 
-  .give-by-select .en__field__label {
-    flex-direction: column !important;
-  }
-
   .give-by-select .en__field__label img {
     width: auto;
     height: auto;
     max-height: 70%;
+    &.paypal-venmo {
+      max-height: 50%;
+    }
   }
 
   .give-by-select .venmo label > img:last-of-type {
@@ -396,6 +399,33 @@
       }
     }
   }
+  /* OTHER AMOUNT FIELD */
+  .radio-to-buttons_donationAmt
+    .en__field--donationAmt
+    .en__field__item.en__field__item--other {
+    position: relative;
+
+    input:focus {
+      outline: none;
+    }
+
+    &:before {
+      content: attr(data-currency-symbol);
+      position: absolute;
+      left: 20px;
+      top: 46%;
+      line-height: 0;
+      font-size: 1em;
+    }
+
+    input {
+      padding-left: 30px;
+      line-height: var(--donation-amount__button_line-height);
+    }
+  }
+  .en__field--withOther--active .en__field__item--other:before {
+    color: #fff;
+  }
   // PREMIUM STYLES
   .en__component--premiumgiftblock {
     --h2_font-size: 22px;
@@ -420,13 +450,16 @@
 
     .en__pg__display,
     .en__pg__images {
-      background-color: #fff;
       border-radius: var(--button_border-radius);
       overflow: hidden;
       min-height: 80px;
       display: flex;
       justify-content: center;
       align-items: center;
+      img {
+        margin: 0;
+        mix-blend-mode: multiply;
+      }
     }
 
     .en__pg__name {
@@ -530,8 +563,6 @@
 
         .en__pg__images img {
           min-width: auto;
-          margin-left: 0;
-          margin-top: 0.5rem;
         }
       }
 
