@@ -17,10 +17,10 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Friday, November 15, 2024 @ 13:31:45 ET
+ *  Date: Friday, November 15, 2024 @ 13:57:58 ET
  *  By: fernando
  *  ENGrid styles: v0.19.20
- *  ENGrid scripts: v0.19.14
+ *  ENGrid scripts: v0.19.20
  *
  *  Created by 4Site Studios
  *  Come work with us or join our team, we would love to hear from you
@@ -5720,7 +5720,7 @@ __webpack_require__.d(__webpack_exports__, {
 
 // UNUSED EXPORTS: animateFill, createSingleton, delegate, followCursor, hideAll, inlinePositioning, roundArrow, sticky
 
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/getWindow.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/getWindow.js
 function getWindow(node) {
   if (node == null) {
     return window;
@@ -5733,7 +5733,7 @@ function getWindow(node) {
 
   return node;
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/instanceOf.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/instanceOf.js
 
 
 function isElement(node) {
@@ -5757,11 +5757,11 @@ function isShadowRoot(node) {
 }
 
 
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/math.js
+;// ./node_modules/@popperjs/core/lib/utils/math.js
 var math_max = Math.max;
 var math_min = Math.min;
 var round = Math.round;
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/userAgent.js
+;// ./node_modules/@popperjs/core/lib/utils/userAgent.js
 function getUAString() {
   var uaData = navigator.userAgentData;
 
@@ -5773,12 +5773,12 @@ function getUAString() {
 
   return navigator.userAgent;
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/isLayoutViewport.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/isLayoutViewport.js
 
 function isLayoutViewport() {
   return !/^((?!chrome|android).)*safari/i.test(getUAString());
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/getBoundingClientRect.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/getBoundingClientRect.js
 
 
 
@@ -5820,7 +5820,7 @@ function getBoundingClientRect(element, includeScale, isFixedStrategy) {
     y: y
   };
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/getWindowScroll.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/getWindowScroll.js
 
 function getWindowScroll(node) {
   var win = getWindow(node);
@@ -5831,14 +5831,14 @@ function getWindowScroll(node) {
     scrollTop: scrollTop
   };
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/getHTMLElementScroll.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/getHTMLElementScroll.js
 function getHTMLElementScroll(element) {
   return {
     scrollLeft: element.scrollLeft,
     scrollTop: element.scrollTop
   };
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/getNodeScroll.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/getNodeScroll.js
 
 
 
@@ -5850,18 +5850,18 @@ function getNodeScroll(node) {
     return getHTMLElementScroll(node);
   }
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/getNodeName.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/getNodeName.js
 function getNodeName(element) {
   return element ? (element.nodeName || '').toLowerCase() : null;
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/getDocumentElement.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/getDocumentElement.js
 
 function getDocumentElement(element) {
   // $FlowFixMe[incompatible-return]: assume body is always available
   return ((isElement(element) ? element.ownerDocument : // $FlowFixMe[prop-missing]
   element.document) || window.document).documentElement;
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/getWindowScrollBarX.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/getWindowScrollBarX.js
 
 
 
@@ -5875,12 +5875,12 @@ function getWindowScrollBarX(element) {
   // this (e.g. Edge 2019, IE11, Safari)
   return getBoundingClientRect(getDocumentElement(element)).left + getWindowScroll(element).scrollLeft;
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/getComputedStyle.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/getComputedStyle.js
 
 function getComputedStyle(element) {
   return getWindow(element).getComputedStyle(element);
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/isScrollParent.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/isScrollParent.js
 
 function isScrollParent(element) {
   // Firefox wants us to check `-x` and `-y` variations as well
@@ -5891,7 +5891,7 @@ function isScrollParent(element) {
 
   return /auto|scroll|overlay|hidden/.test(overflow + overflowY + overflowX);
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/getCompositeRect.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/getCompositeRect.js
 
 
 
@@ -5950,7 +5950,7 @@ function getCompositeRect(elementOrVirtualElement, offsetParent, isFixed) {
     height: rect.height
   };
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/getLayoutRect.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/getLayoutRect.js
  // Returns the layout rect of an element relative to its offsetParent. Layout
 // means it doesn't take into account transforms.
 
@@ -5976,7 +5976,7 @@ function getLayoutRect(element) {
     height: height
   };
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/getParentNode.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/getParentNode.js
 
 
 
@@ -5996,7 +5996,7 @@ function getParentNode(element) {
 
   );
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/getScrollParent.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/getScrollParent.js
 
 
 
@@ -6013,7 +6013,7 @@ function getScrollParent(node) {
 
   return getScrollParent(getParentNode(node));
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/listScrollParents.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/listScrollParents.js
 
 
 
@@ -6040,12 +6040,12 @@ function listScrollParents(element, list) {
   return isBody ? updatedList : // $FlowFixMe[incompatible-call]: isBody tells us target will be an HTMLElement here
   updatedList.concat(listScrollParents(getParentNode(target)));
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/isTableElement.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/isTableElement.js
 
 function isTableElement(element) {
   return ['table', 'td', 'th'].indexOf(getNodeName(element)) >= 0;
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/getOffsetParent.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/getOffsetParent.js
 
 
 
@@ -6115,7 +6115,7 @@ function getOffsetParent(element) {
 
   return offsetParent || getContainingBlock(element) || window;
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/enums.js
+;// ./node_modules/@popperjs/core/lib/enums.js
 var enums_top = 'top';
 var bottom = 'bottom';
 var right = 'right';
@@ -6147,7 +6147,7 @@ var beforeWrite = 'beforeWrite';
 var write = 'write';
 var afterWrite = 'afterWrite';
 var modifierPhases = [beforeRead, read, afterRead, beforeMain, main, afterMain, beforeWrite, write, afterWrite];
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/orderModifiers.js
+;// ./node_modules/@popperjs/core/lib/utils/orderModifiers.js
  // source: https://stackoverflow.com/questions/49875255
 
 function order(modifiers) {
@@ -6192,7 +6192,7 @@ function orderModifiers(modifiers) {
     }));
   }, []);
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/debounce.js
+;// ./node_modules/@popperjs/core/lib/utils/debounce.js
 function debounce(fn) {
   var pending;
   return function () {
@@ -6208,7 +6208,7 @@ function debounce(fn) {
     return pending;
   };
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/mergeByName.js
+;// ./node_modules/@popperjs/core/lib/utils/mergeByName.js
 function mergeByName(modifiers) {
   var merged = modifiers.reduce(function (merged, current) {
     var existing = merged[current.name];
@@ -6223,7 +6223,7 @@ function mergeByName(modifiers) {
     return merged[key];
   });
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/createPopper.js
+;// ./node_modules/@popperjs/core/lib/createPopper.js
 
 
 
@@ -6423,7 +6423,7 @@ function popperGenerator(generatorOptions) {
 var createPopper = /*#__PURE__*/(/* unused pure expression or super */ null && (popperGenerator())); // eslint-disable-next-line import/no-unused-modules
 
 
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/modifiers/eventListeners.js
+;// ./node_modules/@popperjs/core/lib/modifiers/eventListeners.js
  // eslint-disable-next-line import/no-unused-modules
 
 var passive = {
@@ -6473,20 +6473,20 @@ function effect(_ref) {
   effect: effect,
   data: {}
 });
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/getBasePlacement.js
+;// ./node_modules/@popperjs/core/lib/utils/getBasePlacement.js
 
 function getBasePlacement(placement) {
   return placement.split('-')[0];
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/getVariation.js
+;// ./node_modules/@popperjs/core/lib/utils/getVariation.js
 function getVariation(placement) {
   return placement.split('-')[1];
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/getMainAxisFromPlacement.js
+;// ./node_modules/@popperjs/core/lib/utils/getMainAxisFromPlacement.js
 function getMainAxisFromPlacement(placement) {
   return ['top', 'bottom'].indexOf(placement) >= 0 ? 'x' : 'y';
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/computeOffsets.js
+;// ./node_modules/@popperjs/core/lib/utils/computeOffsets.js
 
 
 
@@ -6557,7 +6557,7 @@ function computeOffsets(_ref) {
 
   return offsets;
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/modifiers/popperOffsets.js
+;// ./node_modules/@popperjs/core/lib/modifiers/popperOffsets.js
 
 
 function popperOffsets(_ref) {
@@ -6583,7 +6583,7 @@ function popperOffsets(_ref) {
   fn: popperOffsets,
   data: {}
 });
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/modifiers/computeStyles.js
+;// ./node_modules/@popperjs/core/lib/modifiers/computeStyles.js
 
 
 
@@ -6753,7 +6753,7 @@ function computeStyles(_ref5) {
   fn: computeStyles,
   data: {}
 });
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/modifiers/applyStyles.js
+;// ./node_modules/@popperjs/core/lib/modifiers/applyStyles.js
 
  // This modifier takes the styles prepared by the `computeStyles` modifier
 // and applies them to the HTMLElements such as popper and arrow
@@ -6838,7 +6838,7 @@ function applyStyles_effect(_ref2) {
   effect: applyStyles_effect,
   requires: ['computeStyles']
 });
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/modifiers/offset.js
+;// ./node_modules/@popperjs/core/lib/modifiers/offset.js
 
  // eslint-disable-next-line import/no-unused-modules
 
@@ -6893,7 +6893,7 @@ function offset(_ref2) {
   requires: ['popperOffsets'],
   fn: offset
 });
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/getOppositePlacement.js
+;// ./node_modules/@popperjs/core/lib/utils/getOppositePlacement.js
 var hash = {
   left: 'right',
   right: 'left',
@@ -6905,7 +6905,7 @@ function getOppositePlacement(placement) {
     return hash[matched];
   });
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/getOppositeVariationPlacement.js
+;// ./node_modules/@popperjs/core/lib/utils/getOppositeVariationPlacement.js
 var getOppositeVariationPlacement_hash = {
   start: 'end',
   end: 'start'
@@ -6915,7 +6915,7 @@ function getOppositeVariationPlacement(placement) {
     return getOppositeVariationPlacement_hash[matched];
   });
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/getViewportRect.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/getViewportRect.js
 
 
 
@@ -6947,7 +6947,7 @@ function getViewportRect(element, strategy) {
     y: y
   };
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/getDocumentRect.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/getDocumentRect.js
 
 
 
@@ -6977,7 +6977,7 @@ function getDocumentRect(element) {
     y: y
   };
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/contains.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/contains.js
 
 function contains(parent, child) {
   var rootNode = child.getRootNode && child.getRootNode(); // First, attempt with faster native method
@@ -7001,7 +7001,7 @@ function contains(parent, child) {
 
   return false;
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/rectToClientRect.js
+;// ./node_modules/@popperjs/core/lib/utils/rectToClientRect.js
 function rectToClientRect(rect) {
   return Object.assign({}, rect, {
     left: rect.x,
@@ -7010,7 +7010,7 @@ function rectToClientRect(rect) {
     bottom: rect.y + rect.height
   });
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/dom-utils/getClippingRect.js
+;// ./node_modules/@popperjs/core/lib/dom-utils/getClippingRect.js
 
 
 
@@ -7081,7 +7081,7 @@ function getClippingRect(element, boundary, rootBoundary, strategy) {
   clippingRect.y = clippingRect.top;
   return clippingRect;
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/getFreshSideObject.js
+;// ./node_modules/@popperjs/core/lib/utils/getFreshSideObject.js
 function getFreshSideObject() {
   return {
     top: 0,
@@ -7090,19 +7090,19 @@ function getFreshSideObject() {
     left: 0
   };
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/mergePaddingObject.js
+;// ./node_modules/@popperjs/core/lib/utils/mergePaddingObject.js
 
 function mergePaddingObject(paddingObject) {
   return Object.assign({}, getFreshSideObject(), paddingObject);
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/expandToHashMap.js
+;// ./node_modules/@popperjs/core/lib/utils/expandToHashMap.js
 function expandToHashMap(value, keys) {
   return keys.reduce(function (hashMap, key) {
     hashMap[key] = value;
     return hashMap;
   }, {});
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/detectOverflow.js
+;// ./node_modules/@popperjs/core/lib/utils/detectOverflow.js
 
 
 
@@ -7168,7 +7168,7 @@ function detectOverflow(state, options) {
 
   return overflowOffsets;
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/computeAutoPlacement.js
+;// ./node_modules/@popperjs/core/lib/utils/computeAutoPlacement.js
 
 
 
@@ -7212,7 +7212,7 @@ function computeAutoPlacement(state, options) {
     return overflows[a] - overflows[b];
   });
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/modifiers/flip.js
+;// ./node_modules/@popperjs/core/lib/modifiers/flip.js
 
 
 
@@ -7360,11 +7360,11 @@ function flip(_ref) {
     _skip: false
   }
 });
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/getAltAxis.js
+;// ./node_modules/@popperjs/core/lib/utils/getAltAxis.js
 function getAltAxis(axis) {
   return axis === 'x' ? 'y' : 'x';
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/utils/within.js
+;// ./node_modules/@popperjs/core/lib/utils/within.js
 
 function within(min, value, max) {
   return math_max(min, math_min(value, max));
@@ -7373,7 +7373,7 @@ function withinMaxClamp(min, value, max) {
   var v = within(min, value, max);
   return v > max ? max : v;
 }
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/modifiers/preventOverflow.js
+;// ./node_modules/@popperjs/core/lib/modifiers/preventOverflow.js
 
 
 
@@ -7516,7 +7516,7 @@ function preventOverflow(_ref) {
   fn: preventOverflow,
   requiresIfExists: ['offset']
 });
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/modifiers/arrow.js
+;// ./node_modules/@popperjs/core/lib/modifiers/arrow.js
 
 
 
@@ -7607,7 +7607,7 @@ function arrow_effect(_ref2) {
   requires: ['popperOffsets'],
   requiresIfExists: ['preventOverflow']
 });
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/modifiers/hide.js
+;// ./node_modules/@popperjs/core/lib/modifiers/hide.js
 
 
 
@@ -7669,7 +7669,7 @@ function hide(_ref) {
   requiresIfExists: ['preventOverflow'],
   fn: hide
 });
-;// CONCATENATED MODULE: ./node_modules/@popperjs/core/lib/popper.js
+;// ./node_modules/@popperjs/core/lib/popper.js
 
 
 
@@ -7690,7 +7690,7 @@ var popper_createPopper = /*#__PURE__*/popperGenerator({
  // eslint-disable-next-line import/no-unused-modules
 
 
-;// CONCATENATED MODULE: ./node_modules/tippy.js/dist/tippy.esm.js
+;// ./node_modules/tippy.js/dist/tippy.esm.js
 /**!
 * tippy.js v6.3.7
 * (c) 2017-2021 atomiks
@@ -10224,11 +10224,11 @@ tippy.setDefaultProps({
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+// This entry needs to be wrapped in an IIFE because it needs to be in strict mode.
 (() => {
 "use strict";
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/deprecated.js
+;// ./node_modules/@4site/engrid-scripts/dist/deprecated.js
 // A way to gracefully handle deprecation.
 // Find and replace HTML Elements, Classes, and more after the DOM is loaded but before any other Javascript fires.
 
@@ -10270,7 +10270,7 @@ class Deprecated {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/interfaces/options.js
+;// ./node_modules/@4site/engrid-scripts/dist/interfaces/options.js
 const OptionsDefaults = {
     backgroundImage: "",
     MediaAttribution: true,
@@ -10322,7 +10322,7 @@ const OptionsDefaults = {
     ],
 };
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/interfaces/upsell-options.js
+;// ./node_modules/@4site/engrid-scripts/dist/interfaces/upsell-options.js
 const UpsellOptionsDefaults = {
     image: "https://picsum.photos/480/650",
     imagePosition: "left",
@@ -10358,7 +10358,7 @@ const UpsellOptionsDefaults = {
     upsellCheckbox: false,
 };
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/interfaces/translate-options.js
+;// ./node_modules/@4site/engrid-scripts/dist/interfaces/translate-options.js
 const ptbrTranslation = [
     { field: "supporter.firstName", translation: "Nome" },
     { field: "supporter.lastName", translation: "Sobrenome" },
@@ -10402,7 +10402,7 @@ const TranslateOptionsDefaults = {
     NLD: nlTranslation,
 };
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/interfaces/exit-intent-options.js
+;// ./node_modules/@4site/engrid-scripts/dist/interfaces/exit-intent-options.js
 const ExitIntentOptionsDefaults = {
     enabled: false,
     title: "We are sad that you are leaving",
@@ -10417,7 +10417,7 @@ const ExitIntentOptionsDefaults = {
     },
 };
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/loader.js
+;// ./node_modules/@4site/engrid-scripts/dist/loader.js
 // Ref: https://app.getguru.com/card/iMgx968T/ENgrid-Loader
 
 class Loader {
@@ -10596,7 +10596,7 @@ class Loader {
 
 // EXTERNAL MODULE: ./node_modules/@4site/engrid-scripts/node_modules/strongly-typed-events/dist/index.js
 var dist = __webpack_require__(3199);
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/events/en-form.js
+;// ./node_modules/@4site/engrid-scripts/dist/events/en-form.js
 
 
 class EnForm {
@@ -10650,7 +10650,7 @@ class EnForm {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/events/donation-amount.js
+;// ./node_modules/@4site/engrid-scripts/dist/events/donation-amount.js
 
 
 class DonationAmount {
@@ -10783,7 +10783,7 @@ class DonationAmount {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/engrid.js
+;// ./node_modules/@4site/engrid-scripts/dist/engrid.js
 class engrid_ENGrid {
     constructor() {
         if (!engrid_ENGrid.enForm) {
@@ -11332,7 +11332,7 @@ class engrid_ENGrid {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/events/donation-frequency.js
+;// ./node_modules/@4site/engrid-scripts/dist/events/donation-frequency.js
 
 
 class DonationFrequency {
@@ -11449,7 +11449,7 @@ class DonationFrequency {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/events/processing-fees.js
+;// ./node_modules/@4site/engrid-scripts/dist/events/processing-fees.js
 
 
 
@@ -11543,7 +11543,7 @@ class ProcessingFees {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/events/remember-me-events.js
+;// ./node_modules/@4site/engrid-scripts/dist/events/remember-me-events.js
 /**
  * This class is responsible for managing events related to the "Remember Me" functionality.
  * It uses the Singleton design pattern to ensure only one instance of this class exists.
@@ -11581,7 +11581,7 @@ class RememberMeEvents {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/events/country.js
+;// ./node_modules/@4site/engrid-scripts/dist/events/country.js
 
 
 class Country {
@@ -11625,7 +11625,7 @@ class Country {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/events/index.js
+;// ./node_modules/@4site/engrid-scripts/dist/events/index.js
 
 
 
@@ -11633,7 +11633,7 @@ class Country {
 
 
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/app.js
+;// ./node_modules/@4site/engrid-scripts/dist/app.js
 
 
 class App extends engrid_ENGrid {
@@ -11705,6 +11705,8 @@ class App extends engrid_ENGrid {
         new Advocacy();
         new InputPlaceholders();
         new InputHasValueAndFocus();
+        // Give By Select
+        new GiveBySelect();
         new ShowHideRadioCheckboxes("transaction.giveBySelect", "giveBySelect-");
         new ShowHideRadioCheckboxes("transaction.inmem", "inmem-");
         new ShowHideRadioCheckboxes("transaction.recurrpay", "recurrpay-");
@@ -11895,8 +11897,6 @@ class App extends engrid_ENGrid {
         // Plaid
         if (this.options.Plaid)
             new Plaid();
-        // Give By Select
-        new GiveBySelect();
         //Exit Intent Lightbox
         new ExitIntentLightbox();
         new UrlParamsToBodyAttrs();
@@ -11978,7 +11978,7 @@ class App extends engrid_ENGrid {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/amount-label.js
+;// ./node_modules/@4site/engrid-scripts/dist/amount-label.js
 // This script checks if the donations amounts are numbers and if they are, appends the correct currency symbol
 
 class AmountLabel {
@@ -12009,7 +12009,7 @@ class AmountLabel {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/apple-pay.js
+;// ./node_modules/@4site/engrid-scripts/dist/apple-pay.js
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -12180,7 +12180,7 @@ class ApplePay {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/a11y.js
+;// ./node_modules/@4site/engrid-scripts/dist/a11y.js
 // a11y means accessibility
 // This Component is supposed to be used as a helper for Aria Attributes & Other Accessibility Features
 class A11y {
@@ -12228,7 +12228,7 @@ class A11y {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/capitalize-fields.js
+;// ./node_modules/@4site/engrid-scripts/dist/capitalize-fields.js
 // CapitalizeFields is a class that capitalizes the first letter of the fields passed to it.
 // It subscribes to the onSubmit event of the EnForm class and capitalizes the fields on submit.
 
@@ -12252,7 +12252,7 @@ class CapitalizeFields {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/auto-year.js
+;// ./node_modules/@4site/engrid-scripts/dist/auto-year.js
 // This class changes the Credit Card Expiration Year Field Options to
 // include the current year and the next 19 years.
 class AutoYear {
@@ -12289,7 +12289,7 @@ class AutoYear {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/autocomplete.js
+;// ./node_modules/@4site/engrid-scripts/dist/autocomplete.js
 // This class adds the autocomplete attribute to
 // the most common input elements
 
@@ -12329,7 +12329,7 @@ class Autocomplete {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/ecard.js
+;// ./node_modules/@4site/engrid-scripts/dist/ecard.js
 
 class Ecard {
     constructor() {
@@ -12392,7 +12392,7 @@ class Ecard {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/click-to-expand.js
+;// ./node_modules/@4site/engrid-scripts/dist/click-to-expand.js
 // This class is used to expand content when a user clicks on a div with the class "click-to-expand".
 // The content is shortened by default and will expand when clicked.
 
@@ -12433,7 +12433,7 @@ class ClickToExpand {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/advocacy.js
+;// ./node_modules/@4site/engrid-scripts/dist/advocacy.js
 // Component to handle advocacy features
 // 1 - Adds EN Polyfill to support "label" clicking on Advocacy Recipient "labels"
 
@@ -12469,7 +12469,7 @@ class Advocacy {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/data-attributes.js
+;// ./node_modules/@4site/engrid-scripts/dist/data-attributes.js
 // Component that adds data attributes to the Body
 
 class DataAttributes {
@@ -12605,10 +12605,24 @@ class DataAttributes {
         if (!CSS.supports("selector(:has(*))")) {
             engrid_ENGrid.setBodyData("css-has-selector", "false");
         }
+        if (engrid_ENGrid.getPageType() === "DONATION") {
+            this.addFrequencyDataAttribute();
+        }
+    }
+    // Add a data attribute to the body tag with how many visible frequency options there are
+    addFrequencyDataAttribute() {
+        const frequencyOptions = document.querySelectorAll(".en__field--recurrfreq .en__field__item label.en__field__label");
+        let visibleFrequencyOptions = 0;
+        frequencyOptions.forEach((option) => {
+            if (engrid_ENGrid.isVisible(option)) {
+                visibleFrequencyOptions++;
+            }
+        });
+        engrid_ENGrid.setBodyData("visible-frequency", visibleFrequencyOptions.toString());
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/iframe.js
+;// ./node_modules/@4site/engrid-scripts/dist/iframe.js
 
 
 class iFrame {
@@ -12876,7 +12890,7 @@ class iFrame {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/input-has-value-and-focus.js
+;// ./node_modules/@4site/engrid-scripts/dist/input-has-value-and-focus.js
 // Component that adds has-value and has-focus classes to form inputs
 
 class InputHasValueAndFocus {
@@ -12928,7 +12942,7 @@ class InputHasValueAndFocus {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/input-placeholders.js
+;// ./node_modules/@4site/engrid-scripts/dist/input-placeholders.js
 // Component that adds input placeholders
 // You can override the default placeholders by adding a Placeholders option to the EngridOptions on the client theme.
 // You can also add an EngridPageOptions override to the page, if you want to override the placeholders on a specific page. Example:
@@ -12949,8 +12963,10 @@ class InputPlaceholders {
             "input#en__field_supporter_emailAddress": "Email Address",
             "input#en__field_supporter_phoneNumber": "Phone Number (Optional)",
             ".en__mandatory input#en__field_supporter_phoneNumber": "Phone Number",
+            ".required-if-visible input#en__field_supporter_phoneNumber": "Phone Number",
             "input#en__field_supporter_phoneNumber2": "000-000-0000 (Optional)",
             ".en__mandatory input#en__field_supporter_phoneNumber2": "000-000-0000",
+            ".required-if-visible input#en__field_supporter_phoneNumber2": "000-000-0000",
             "input#en__field_supporter_country": "Country",
             "input#en__field_supporter_address1": "Street Address",
             "input#en__field_supporter_address2": "Apt., Ste., Bldg.",
@@ -13012,7 +13028,7 @@ class InputPlaceholders {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/media-attribution.js
+;// ./node_modules/@4site/engrid-scripts/dist/media-attribution.js
 /*
   Looks for specially crafted <img> links and will transform its markup to display an attribution overlay on top of the image
   Depends on "_engrid-media-attribution.scss" for styling
@@ -13080,7 +13096,7 @@ class MediaAttribution {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/live-variables.js
+;// ./node_modules/@4site/engrid-scripts/dist/live-variables.js
 
 
 class LiveVariables {
@@ -13229,7 +13245,7 @@ class LiveVariables {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/upsell-lightbox.js
+;// ./node_modules/@4site/engrid-scripts/dist/upsell-lightbox.js
 
 
 class UpsellLightbox {
@@ -13594,7 +13610,7 @@ class UpsellLightbox {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/upsell-checkbox.js
+;// ./node_modules/@4site/engrid-scripts/dist/upsell-checkbox.js
 // This component will add a checkbox to the donation form that will allow the user to upgrade their donation to a monthly donation.
 
 
@@ -13841,7 +13857,7 @@ class UpsellCheckbox {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/show-hide-radio-checkboxes.js
+;// ./node_modules/@4site/engrid-scripts/dist/show-hide-radio-checkboxes.js
 
 class ShowHideRadioCheckboxes {
     // Create default data attributes on all fields
@@ -14004,7 +14020,7 @@ class ShowHideRadioCheckboxes {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/cookie.js
+;// ./node_modules/@4site/engrid-scripts/dist/cookie.js
 /**
 Example:
 import * as cookie from "./cookie";
@@ -14082,7 +14098,7 @@ function remove(name, attributes) {
     set(name, "", Object.assign(Object.assign({}, attributes), { expires: -1 }));
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/translate-fields.js
+;// ./node_modules/@4site/engrid-scripts/dist/translate-fields.js
 // Component to translate fields based on the country selected
 // It will also adapt the state field to the country selected
 
@@ -14632,7 +14648,7 @@ class TranslateFields {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/auto-country-select.js
+;// ./node_modules/@4site/engrid-scripts/dist/auto-country-select.js
 // This class works when the user has added ".simple_country_select" as a class in page builder for the Country select
 
 
@@ -14699,7 +14715,7 @@ class AutoCountrySelect {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/skip-link.js
+;// ./node_modules/@4site/engrid-scripts/dist/skip-link.js
 // Javascript that adds an accessible "Skip Link" button after the <body> opening that jumps to
 // the first <title> or <h1> field in a "body-" section, or the first <h1> if none are found
 // in those sections
@@ -14737,7 +14753,7 @@ class SkipToMainContentLink {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/src-defer.js
+;// ./node_modules/@4site/engrid-scripts/dist/src-defer.js
 // Build Notes: Add the vanilla Javascript version inline inside the page template right before </body>
 // In the event the vanilla javascript is not inlined we should still process any assets with a data-src still defined on it. Plus we only process background video via this JS file as to not block the page with a large video file downloading.
 // // 4Site's simplified image lazy loader
@@ -14809,7 +14825,7 @@ class SrcDefer {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/set-recurr-freq.js
+;// ./node_modules/@4site/engrid-scripts/dist/set-recurr-freq.js
 
 
 class setRecurrFreq {
@@ -14881,7 +14897,7 @@ class setRecurrFreq {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/page-background.js
+;// ./node_modules/@4site/engrid-scripts/dist/page-background.js
 
 class PageBackground {
     constructor() {
@@ -14938,7 +14954,7 @@ class PageBackground {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/neverbounce.js
+;// ./node_modules/@4site/engrid-scripts/dist/neverbounce.js
 
 
 class NeverBounce {
@@ -15184,7 +15200,7 @@ class NeverBounce {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/freshaddress.js
+;// ./node_modules/@4site/engrid-scripts/dist/freshaddress.js
 // According to the FreshAddress documentation, you need to add the following code to your page:
 // jQuery library.
 // <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
@@ -15390,7 +15406,7 @@ class FreshAddress {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/progress-bar.js
+;// ./node_modules/@4site/engrid-scripts/dist/progress-bar.js
 
 class ProgressBar {
     constructor() {
@@ -15432,7 +15448,7 @@ class ProgressBar {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/remember-me.js
+;// ./node_modules/@4site/engrid-scripts/dist/remember-me.js
 
 
 const remember_me_tippy = (__webpack_require__(9244)/* ["default"] */ .Ay);
@@ -15792,7 +15808,7 @@ class RememberMe {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/show-if-amount.js
+;// ./node_modules/@4site/engrid-scripts/dist/show-if-amount.js
 
 
 class ShowIfAmount {
@@ -15911,7 +15927,7 @@ class ShowIfAmount {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/other-amount.js
+;// ./node_modules/@4site/engrid-scripts/dist/other-amount.js
 // This class automatically select other radio input when an amount is entered into it.
 
 class OtherAmount {
@@ -15983,7 +15999,7 @@ class OtherAmount {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/logger.js
+;// ./node_modules/@4site/engrid-scripts/dist/logger.js
 
 /**
  * A better logger. It only works if debug is enabled.
@@ -16069,7 +16085,7 @@ class EngridLogger {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/min-max-amount.js
+;// ./node_modules/@4site/engrid-scripts/dist/min-max-amount.js
 // This script adds an erros message to the page if the amount is greater than the max amount or less than the min amount.
 
 class MinMaxAmount {
@@ -16142,7 +16158,7 @@ class MinMaxAmount {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/ticker.js
+;// ./node_modules/@4site/engrid-scripts/dist/ticker.js
 
 class Ticker {
     constructor() {
@@ -16210,7 +16226,7 @@ class Ticker {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/data-layer.js
+;// ./node_modules/@4site/engrid-scripts/dist/data-layer.js
 // The DataLayer class is a singleton class that is responsible for managing the data layer events.
 // It listens to the EnForm onSubmit event and the RememberMe onLoad event.
 // It also listens to the blur, change, and submit events of the form fields.
@@ -16524,7 +16540,7 @@ class DataLayer {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/data-replace.js
+;// ./node_modules/@4site/engrid-scripts/dist/data-replace.js
 // This script is used to replace merge tags in the EN Blocks of the page.
 // It searches for HTML elements containing the data to be replaced and replaces it.
 // The data to be replaced is passed as URL parameters, example: ?engrid_data[key]=value.
@@ -16602,7 +16618,7 @@ class DataReplace {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/data-hide.js
+;// ./node_modules/@4site/engrid-scripts/dist/data-hide.js
 // Hides elements based on URL arguments.
 //
 // The DataHide class is used to hide elements based on URL arguments.
@@ -16670,7 +16686,7 @@ class DataHide {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/add-name-to-message.js
+;// ./node_modules/@4site/engrid-scripts/dist/add-name-to-message.js
 /*
  Adds first and last name when First Name and Last Name fields lose focus if name shortcodes aren't present
 */
@@ -16721,7 +16737,7 @@ class AddNameToMessage {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/expand-region-name.js
+;// ./node_modules/@4site/engrid-scripts/dist/expand-region-name.js
 // Populates hidden supporter field "Region Long Format" with expanded name (e.g FL becomes Florida)
 
 
@@ -16767,7 +16783,7 @@ class ExpandRegionName {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/url-to-form.js
+;// ./node_modules/@4site/engrid-scripts/dist/url-to-form.js
 // Component that allows to set a field value from URL parameters
 // Workflow:
 // 1. Loop through all the URL parameters
@@ -16783,7 +16799,8 @@ class UrlToForm {
         this.urlParams.forEach((value, key) => {
             const field = document.getElementsByName(key)[0];
             if (field) {
-                if (!["text", "textarea"].includes(field.type) || !field.value) {
+                if (!["text", "textarea", "email"].includes(field.type) ||
+                    !field.value) {
                     engrid_ENGrid.setFieldValue(key, value);
                     this.logger.log(`Set: ${key} to ${value}`);
                 }
@@ -16801,7 +16818,7 @@ class UrlToForm {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/required-if-visible.js
+;// ./node_modules/@4site/engrid-scripts/dist/required-if-visible.js
 
 class RequiredIfVisible {
     constructor() {
@@ -16863,7 +16880,7 @@ class RequiredIfVisible {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/tidycontact.js
+;// ./node_modules/@4site/engrid-scripts/dist/tidycontact.js
 var tidycontact_awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -18067,7 +18084,7 @@ class TidyContact {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/live-currency.js
+;// ./node_modules/@4site/engrid-scripts/dist/live-currency.js
 // This script enables live currency symbol and code to the page.
 
 class LiveCurrency {
@@ -18209,7 +18226,7 @@ class LiveCurrency {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/custom-currency.js
+;// ./node_modules/@4site/engrid-scripts/dist/custom-currency.js
 // This component allows you to customize the currency options in the currency field
 // It is used in the following way:
 //
@@ -18323,7 +18340,7 @@ class CustomCurrency {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/autosubmit.js
+;// ./node_modules/@4site/engrid-scripts/dist/autosubmit.js
 // Automatically submits the page if a URL argument is present
 
 class Autosubmit {
@@ -18334,12 +18351,14 @@ class Autosubmit {
             !window.EngagingNetworks.require._defined.enjs.checkSubmissionFailed() &&
             engrid_ENGrid.getUrlParameter("autosubmit") === "Y") {
             this.logger.log("Autosubmitting Form");
+            // Fix EN ?chain parameter not working with email addresses with + in them
+            engrid_ENGrid.setFieldValue("supporter.emailAddress", engrid_ENGrid.getFieldValue("supporter.emailAddress").replace(/\s/g, "+"));
             this._form.submitForm();
         }
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/event-tickets.js
+;// ./node_modules/@4site/engrid-scripts/dist/event-tickets.js
 class EventTickets {
     constructor() {
         // --------------------------------------------
@@ -18365,7 +18384,7 @@ class EventTickets {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/swap-amounts.js
+;// ./node_modules/@4site/engrid-scripts/dist/swap-amounts.js
 // This script allows you to override the default donation amounts in Engaging Networks
 // with a custom list of amounts.
 /**
@@ -18448,7 +18467,7 @@ class SwapAmounts {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/debug-panel.js
+;// ./node_modules/@4site/engrid-scripts/dist/debug-panel.js
 
 class DebugPanel {
     constructor(pageLayouts) {
@@ -18958,7 +18977,7 @@ class DebugPanel {
 }
 DebugPanel.debugSessionStorageKey = "engrid_debug_panel";
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/debug-hidden-fields.js
+;// ./node_modules/@4site/engrid-scripts/dist/debug-hidden-fields.js
 // Switches hidden fields to be type text when debug mode is enabled.
 
 class DebugHiddenFields {
@@ -19002,7 +19021,7 @@ class DebugHiddenFields {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/branding-html.js
+;// ./node_modules/@4site/engrid-scripts/dist/branding-html.js
 var branding_html_awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -19074,7 +19093,7 @@ class BrandingHtml {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/country-disable.js
+;// ./node_modules/@4site/engrid-scripts/dist/country-disable.js
 // This class allows you to disable some countries from the country dropdown list.
 
 class CountryDisable {
@@ -19098,7 +19117,7 @@ class CountryDisable {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/premium-gift.js
+;// ./node_modules/@4site/engrid-scripts/dist/premium-gift.js
 // Component to handle premium gift features
 // 1 - Add a class to body to indicate which premium gift is selected (data-engrid-premium-gift-name="item-name-slugged")
 // 2 - Add a class to body to indicate if the "maximize my impact" is selected (data-engrid-premium-gift-maximize="true|false")
@@ -19215,7 +19234,7 @@ class PremiumGift {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/digital-wallets.js
+;// ./node_modules/@4site/engrid-scripts/dist/digital-wallets.js
 
 class DigitalWallets {
     constructor() {
@@ -19360,7 +19379,7 @@ class DigitalWallets {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/mobile-cta.js
+;// ./node_modules/@4site/engrid-scripts/dist/mobile-cta.js
 // This component adds a floating CTA button to the page, which can be used to scroll to the top of the form
 
 class MobileCTA {
@@ -19433,7 +19452,7 @@ class MobileCTA {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/live-frequency.js
+;// ./node_modules/@4site/engrid-scripts/dist/live-frequency.js
 // This script creates merge tags: [[frequency]], [[Frequency]], or [[FREQUENCY]]
 // that gets replaced with the donation frequency
 // and can be used on any Code Block, Text Block, or Form Block
@@ -19544,7 +19563,7 @@ class LiveFrequency {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/universal-opt-in.js
+;// ./node_modules/@4site/engrid-scripts/dist/universal-opt-in.js
 /**
  * This class will add event listeners to every yes/no radio button or checkbox
  * inside a universal opt-in element (any form block with the CSS class universal-opt-in). When the user clicks on a radio/checkbox
@@ -19637,7 +19656,7 @@ class UniversalOptIn {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/plaid.js
+;// ./node_modules/@4site/engrid-scripts/dist/plaid.js
 // Component with a helper to auto-click on the Plaid link
 // when that payment method is selected
 
@@ -19688,7 +19707,7 @@ class Plaid {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/give-by-select.js
+;// ./node_modules/@4site/engrid-scripts/dist/give-by-select.js
 
 class GiveBySelect {
     constructor() {
@@ -19771,7 +19790,7 @@ class GiveBySelect {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/url-params-to-body-attrs.js
+;// ./node_modules/@4site/engrid-scripts/dist/url-params-to-body-attrs.js
 //This component adds any url parameters that begin with "data-engrid-" to the body as attributes.
 
 class UrlParamsToBodyAttrs {
@@ -19787,7 +19806,7 @@ class UrlParamsToBodyAttrs {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/exit-intent-lightbox.js
+;// ./node_modules/@4site/engrid-scripts/dist/exit-intent-lightbox.js
 
 
 class ExitIntentLightbox {
@@ -19934,7 +19953,7 @@ class ExitIntentLightbox {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/supporter-hub.js
+;// ./node_modules/@4site/engrid-scripts/dist/supporter-hub.js
 // Component that adds 4Site Special Features to the Supporter Hub Page
 
 class SupporterHub {
@@ -20011,7 +20030,7 @@ class SupporterHub {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/fast-form-fill.js
+;// ./node_modules/@4site/engrid-scripts/dist/fast-form-fill.js
 /**
  * This class adds body data attributes if all mandatory inputs, on specific form blocks, are filled.
  * Related styling (to hide elements) can be found in "fast-form-fill.scss".
@@ -20088,7 +20107,7 @@ class FastFormFill {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/set-attr.js
+;// ./node_modules/@4site/engrid-scripts/dist/set-attr.js
 /*+
   The class is used to set body attributes via click handlers.
   The format is "setattr--{attribute}--{value}".
@@ -20121,7 +20140,7 @@ class SetAttr {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/show-if-present.js
+;// ./node_modules/@4site/engrid-scripts/dist/show-if-present.js
 /**
  * This class contains the logic for special classes that can be used to hide elements if
  * certain supporter questions are present or absent.
@@ -20202,7 +20221,7 @@ class ShowIfPresent {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/en-validators.js
+;// ./node_modules/@4site/engrid-scripts/dist/en-validators.js
 // This component uses EN's Custom Validators on the client side to validate form fields.
 // It's currently behind a feature flag, so it's not enabled by default.
 // To enable it, add the following to your options:
@@ -20293,7 +20312,7 @@ class ENValidators {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/postal-code-validator.js
+;// ./node_modules/@4site/engrid-scripts/dist/postal-code-validator.js
 
 
 
@@ -20413,7 +20432,7 @@ class PostalCodeValidator {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/vgs.js
+;// ./node_modules/@4site/engrid-scripts/dist/vgs.js
 // This component allows you to customize the VGS theme options
 //
 // It is used in the following way:
@@ -20665,7 +20684,7 @@ class VGS {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/country-redirect.js
+;// ./node_modules/@4site/engrid-scripts/dist/country-redirect.js
 // This component allows you to redirect the user to a different page based on their country.
 // It works by checking the country field on the page and comparing it to the list of countries in the CountryRedirect option.
 // If the country matches one of the countries in the list, the user is redirected to the specified URL only if the URL is not the same as the current page.
@@ -20728,7 +20747,7 @@ class CountryRedirect {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/welcome-back.js
+;// ./node_modules/@4site/engrid-scripts/dist/welcome-back.js
 /**
  * This component adds a welcome back message and a personal details summary to the page.
  * It depends on the "fast-personal-details" functionality from the FastFormFill component.
@@ -20782,6 +20801,7 @@ class WelcomeBack {
     }
     shouldRun() {
         return (!!document.querySelector(".fast-personal-details") &&
+            engrid_ENGrid.getBodyData("embedded") !== "thank-you-page-donation" &&
             this.options !== false);
     }
     addWelcomeBack() {
@@ -20860,7 +20880,7 @@ class WelcomeBack {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/interfaces/ecard-to-target-options.js
+;// ./node_modules/@4site/engrid-scripts/dist/interfaces/ecard-to-target-options.js
 const EcardToTargetOptionsDefaults = {
     targetName: "",
     targetEmail: "",
@@ -20870,7 +20890,7 @@ const EcardToTargetOptionsDefaults = {
     addSupporterNameToMessage: false,
 };
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/ecard-to-target.js
+;// ./node_modules/@4site/engrid-scripts/dist/ecard-to-target.js
 /**
  * This component adjusts an ecard form to target a specific recipient,
  * defined in a code block
@@ -20945,7 +20965,7 @@ class EcardToTarget {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/interfaces/embedded-ecard-options.js
+;// ./node_modules/@4site/engrid-scripts/dist/interfaces/embedded-ecard-options.js
 const EmbeddedEcardOptionsDefaults = {
     pageUrl: "",
     headerText: "Send an Ecard notification of your gift",
@@ -20954,7 +20974,7 @@ const EmbeddedEcardOptionsDefaults = {
     placement: "afterend",
 };
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/embedded-ecard.js
+;// ./node_modules/@4site/engrid-scripts/dist/embedded-ecard.js
 /**
  * This class handles adding a checkbox to a form that, when checked, will display an embedded ecard form.
  * The embedded ecard form is hosted on a separate page and is displayed in an iframe.
@@ -21223,7 +21243,7 @@ class EmbeddedEcard {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/us-only-form.js
+;// ./node_modules/@4site/engrid-scripts/dist/us-only-form.js
 /*
  * This class disables the country field and fixes the country to "United States"
  */
@@ -21255,7 +21275,7 @@ class UsOnlyForm {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/thank-you-page-conditional-content.js
+;// ./node_modules/@4site/engrid-scripts/dist/thank-you-page-conditional-content.js
 
 class ThankYouPageConditionalContent {
     constructor() {
@@ -21303,7 +21323,7 @@ class ThankYouPageConditionalContent {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/checkbox-label.js
+;// ./node_modules/@4site/engrid-scripts/dist/checkbox-label.js
 // Component to allow the user to set custom labels for the checkboxes,
 // you can customize the checkbox label on a per-page basis, which is not possible with Engaging Networks
 // The .checkbox-label element should be placed right before the checkbox form block
@@ -21335,10 +21355,10 @@ class CheckboxLabel {
     }
 }
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/version.js
-const AppVersion = "0.19.14";
+;// ./node_modules/@4site/engrid-scripts/dist/version.js
+const AppVersion = "0.19.20";
 
-;// CONCATENATED MODULE: ./node_modules/@4site/engrid-scripts/dist/index.js
+;// ./node_modules/@4site/engrid-scripts/dist/index.js
  // Runs first so it can change the DOM markup before any markup dependent code fires
 
 
@@ -21428,7 +21448,7 @@ const AppVersion = "0.19.14";
 
 // EXTERNAL MODULE: ./node_modules/tippy.js/dist/tippy.esm.js + 54 modules
 var tippy_esm = __webpack_require__(9244);
-;// CONCATENATED MODULE: ./src/scripts/main.js
+;// ./src/scripts/main.js
 
 const customScript = function (App) {
   // Add your client scripts here
@@ -21454,7 +21474,7 @@ const customScript = function (App) {
   }
   addTransactionFeeTooltip();
 };
-;// CONCATENATED MODULE: ./src/index.ts
+;// ./src/index.ts
  // Uses ENGrid via NPM
 // import { Options, App } from "../../engrid/packages/scripts"; // Uses ENGrid via Visual Studio Workspace
 
