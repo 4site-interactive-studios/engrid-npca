@@ -19,8 +19,8 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Friday, November 15, 2024 @ 13:57:58 ET
- *  By: fernando
+ *  Date: Tuesday, November 19, 2024 @ 11:48:00 ET
+ *  By: bryancasler
  *  ENGrid styles: v0.19.20
  *  ENGrid scripts: v0.19.20
  *
@@ -7804,6 +7804,8 @@ body[data-engrid-debug]:before{
   --checkbox_border-color:#545454;
   --premium__image_max-height:100px;
   --maximize_my_donation_image:url(https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10104/premium-image.jpeg?v=1731096250000);
+  --checkbox_font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --checkbox_color_checked:#fff;
 }
 [data-engrid-theme=npca][data-engrid-visible-frequency="4"]{
   --recurring-frequency__button_count:4;
@@ -7816,6 +7818,9 @@ body[data-engrid-debug]:before{
 }
 [data-engrid-theme=npca][data-engrid-visible-frequency="1"]{
   --recurring-frequency__button_count:1;
+}
+[data-engrid-theme=npca]#en__pagebuilder .body-banner,[data-engrid-theme=npca]#en__pagebuilder .body-bannerOverlay,[data-engrid-theme=npca]#en__pagebuilder .body-bottom,[data-engrid-theme=npca]#en__pagebuilder .body-footerOutside,[data-engrid-theme=npca]#en__pagebuilder .body-header,[data-engrid-theme=npca]#en__pagebuilder .content-footerSpacer,[data-engrid-theme=npca]#en__pagebuilder .content-header,[data-engrid-theme=npca]#en__pagebuilder .content-preFooter,[data-engrid-theme=npca]#en__pagebuilder .page-alert,[data-engrid-theme=npca]#en__pagebuilder .page-backgroundImageOverlay{
+  display:none !important;
 }
 [data-engrid-theme=npca] .content-footer{
   grid-column:bc;
@@ -7930,17 +7935,17 @@ body[data-engrid-debug]:before{
 [data-engrid-theme=npca] .transaction-fee-opt-in{
   --checkbox_background-color:var(--engrid__body_background-color);
   --checkbox_background-color_hover:var(--engrid__body_background-color);
-  --checkbox_background-color_checked:var(--engrid__body_background-color);
+  --checkbox_background-color_checked:#045237;
   --checkbox_font-weight:700;
   --checkbox_font-size:16px;
   --checkbox_line-height:1.3;
   justify-self:center;
   margin-top:10px;
-  max-width:450px;
   width:100%;
 }
 [data-engrid-theme=npca] .transaction-fee-opt-in .en__field__element--checkbox{
   flex-wrap:nowrap;
+  gap:1rem;
 }
 [data-engrid-theme=npca] .transaction-fee-opt-in .transaction-fee-tooltip{
   border:2px solid #000;
@@ -7956,9 +7961,12 @@ body[data-engrid-debug]:before{
 [data-engrid-theme=npca] .transaction-fee-opt-in .en__field__input--checkbox:focus+.en__field__label{
   outline:none;
 }
+[data-engrid-theme=npca] .transaction-fee-opt-in .en__field__item{
+  padding:0 !important;
+}
 [data-engrid-theme=npca] .tippy-box[data-theme~=white]{
-  background-color:#fff;
-  border:2px solid #000;
+  background-color:#f5f5f5;
+  border:2px solid #7f7266;
   border-radius:0;
   color:#000;
   font-size:16px;
@@ -7970,9 +7978,9 @@ body[data-engrid-debug]:before{
   padding:0;
 }
 [data-engrid-theme=npca] .tippy-box[data-theme~=white] .custom-tooltip-arrow{
-  background:#fff;
-  border-bottom:2px solid #000;
-  border-right:2px solid #000;
+  background:#f5f5f5;
+  border-bottom:2px solid #7f7266;
+  border-right:2px solid #7f7266;
   height:20px;
   width:20px;
 }
@@ -8140,7 +8148,16 @@ body[data-engrid-debug]:before{
   --select_line-height:24px;
   margin-top:calc(var(--fields_spacing-inline)*.5);
 }
-@media screen and (min-width:879px){
+[data-engrid-theme=npca] input[type=checkbox]:focus+label:before,[data-engrid-theme=npca] input[type=checkbox]:hover+label:before{
+  background-color:#fafafa;
+  color:#ababab;
+  content:var(--checkbox_content_checked);
+}
+[data-engrid-theme=npca] input.en__field__input:checked+label:before{
+  background-color:#045237;
+  color:#fff;
+}
+@media screen and (min-width:880px){
   [data-engrid-theme=npca]:not(#en__pagebuilder)[data-engrid-layout=leftleft1col] .page-backgroundImage{
     grid-column:rpc /  pc;
   }

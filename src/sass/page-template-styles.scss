@@ -182,10 +182,29 @@
 
   --premium__image_max-height: 100px;
   --maximize_my_donation_image: url(https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10104/premium-image.jpeg?v=1731096250000);
+
+  --checkbox_font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --checkbox_color_checked: #ffffff;
+
 }
 
 /* Add your custom theme styles here */
 [data-engrid-theme="npca"] {
+
+  /* Hide NPCA unused sections */
+  &#en__pagebuilder .page-alert,
+  &#en__pagebuilder .content-header,
+  &#en__pagebuilder .body-header,
+  &#en__pagebuilder .body-banner,
+  &#en__pagebuilder .body-bannerOverlay,
+  &#en__pagebuilder .body-bottom,
+  &#en__pagebuilder .body-footerOutside,
+  &#en__pagebuilder .content-footerSpacer,
+  &#en__pagebuilder .content-preFooter,
+  &#en__pagebuilder .page-backgroundImageOverlay{
+    display: none !important;
+  }
+
   .content-footer {
     grid-column: bc;
     z-index: 3 !important;
@@ -328,18 +347,19 @@
   .transaction-fee-opt-in {
     --checkbox_background-color: var(--engrid__body_background-color);
     --checkbox_background-color_hover: var(--engrid__body_background-color);
-    --checkbox_background-color_checked: var(--engrid__body_background-color);
+    --checkbox_background-color_checked: #045237;
     --checkbox_font-weight: 700;
     --checkbox_font-size: 16px;
     --checkbox_line-height: 1.3;
 
-    max-width: 450px;
+    // max-width: 450px;
     width: 100%;
     justify-self: center;
     margin-top: 10px;
 
     .en__field__element--checkbox {
       flex-wrap: nowrap;
+      gap: 1rem;
     }
 
     .transaction-fee-tooltip {
@@ -357,26 +377,30 @@
     .en__field__input--checkbox:focus + .en__field__label {
       outline: none;
     }
+
+    .en__field__item{
+      padding: 0 !important;
+    }
   }
 
   .tippy-box[data-theme~="white"] {
-    background-color: #ffffff;
+    background-color: #f5f5f5;
     color: #000;
     padding: 10px;
     font-size: 16px;
     font-weight: 700;
     max-width: 300px !important;
     border-radius: 0;
-    border: 2px solid #000;
+    border: 2px solid #7f7266;
 
     .tippy-content {
       padding: 0;
     }
 
     .custom-tooltip-arrow {
-      background: #fff;
-      border-bottom: 2px solid #000;
-      border-right: 2px solid #000;
+      background: #f5f5f5;
+      border-bottom: 2px solid #7f7266;
+      border-right: 2px solid #7f7266;
       height: 20px;
       width: 20px;
     }
@@ -588,7 +612,19 @@
     }
   }
 
-  @media screen and (min-width: 879px) {
+  input[type=checkbox]:focus+label:before,
+  input[type=checkbox]:hover+label:before{
+    background-color: #fafafa;
+    color: #ababab;
+    content: var(--checkbox_content_checked);
+  }
+
+  input.en__field__input:checked + label:before{
+    background-color: #045237;
+    color: #ffffff;
+  }
+
+  @media screen and (min-width: 880px) {
     &:not(#en__pagebuilder)[data-engrid-layout="leftleft1col"] {
       .page-backgroundImage {
         grid-column: rpc/pc;
