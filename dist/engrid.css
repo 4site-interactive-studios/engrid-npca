@@ -19,7 +19,7 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Tuesday, November 19, 2024 @ 11:48:00 ET
+ *  Date: Tuesday, November 19, 2024 @ 15:10:58 ET
  *  By: bryancasler
  *  ENGrid styles: v0.19.20
  *  ENGrid scripts: v0.19.20
@@ -7819,6 +7819,11 @@ body[data-engrid-debug]:before{
 [data-engrid-theme=npca][data-engrid-visible-frequency="1"]{
   --recurring-frequency__button_count:1;
 }
+[data-engrid-theme=npca]{
+  --click-to-expand__copy-area_height:193px;
+  --click-to-expand__cta-image_height:22px;
+  --click-to-expand__cta-image_width:100%;
+}
 [data-engrid-theme=npca]#en__pagebuilder .body-banner,[data-engrid-theme=npca]#en__pagebuilder .body-bannerOverlay,[data-engrid-theme=npca]#en__pagebuilder .body-bottom,[data-engrid-theme=npca]#en__pagebuilder .body-footerOutside,[data-engrid-theme=npca]#en__pagebuilder .body-header,[data-engrid-theme=npca]#en__pagebuilder .content-footerSpacer,[data-engrid-theme=npca]#en__pagebuilder .content-header,[data-engrid-theme=npca]#en__pagebuilder .content-preFooter,[data-engrid-theme=npca]#en__pagebuilder .page-alert,[data-engrid-theme=npca]#en__pagebuilder .page-backgroundImageOverlay{
   display:none !important;
 }
@@ -8167,6 +8172,33 @@ body[data-engrid-debug]:before{
     right:0;
     width:calc(100% - 680px);
   }
+}
+[data-engrid-theme=npca]:not(#en__pagebuilder) .click-to-expand:not(.expanded){
+  margin-bottom:1em;
+}
+[data-engrid-theme=npca]:not(#en__pagebuilder) .click-to-expand:not(.expanded) .click-to-expand-cta{
+  background:none !important;
+  padding-bottom:1em;
+  right:auto !important;
+}
+[data-engrid-theme=npca]:not(#en__pagebuilder) .click-to-expand:not(.expanded) .click-to-expand-cta:before{
+  content:var(--click-to-expand__cta-image_url);
+  left:3px;
+  position:absolute;
+  transform:rotate(-90deg);
+}
+[data-engrid-theme=npca]:not(#en__pagebuilder) .click-to-expand:not(.expanded) .click-to-expand-cta:after{
+  content:"Read More";
+  font-weight:700;
+  left:20px;
+  position:relative;
+  top:2px;
+}
+[data-engrid-theme=npca]:not(#en__pagebuilder) .click-to-expand:not(.expanded) .click-to-expand-text-wrapper{
+  mask-image:linear-gradient(to bottom, #000 50%, #fff0 calc(100% - var(--click-to-expand__cta-image_height) - 13px));
+}
+[data-engrid-theme=npca] .click-to-expand.expanded .click-to-expand-text-wrapper>:last-child{
+  margin-bottom:0;
 }
 @media (max-width:530px){
   [data-engrid-theme=npca][data-engrid-layout]{
