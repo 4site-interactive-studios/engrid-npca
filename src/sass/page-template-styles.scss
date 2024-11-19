@@ -640,6 +640,12 @@
     }
   }
 
+  @media screen and (max-width: 879px) {
+    &:not(#en__pagebuilder) .click-to-expand .click-to-expand-text-wrapper>:first-child{
+      margin-block-start: 1em;
+    }
+  }
+
   --click-to-expand__copy-area_height: 193px;
   --click-to-expand__cta-image_height: 22px;
   --click-to-expand__cta-image_width: 100%;
