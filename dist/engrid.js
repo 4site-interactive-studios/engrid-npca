@@ -17,10 +17,10 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Tuesday, November 19, 2024 @ 16:01:26 ET
+ *  Date: Tuesday, November 19, 2024 @ 16:01:57 ET
  *  By: bryancasler
  *  ENGrid styles: v0.19.20
- *  ENGrid scripts: v0.19.20
+ *  ENGrid scripts: v0.19.22
  *
  *  Created by 4Site Studios
  *  Come work with us or join our team, we would love to hear from you
@@ -12699,6 +12699,10 @@ class iFrame {
                     : 0;
                 this.logger.log(`iFrame Event 'scrollTo' - Position of top of first error ${scrollTo} px`); // check the message is being sent correctly
                 window.parent.postMessage({ scrollTo }, "*");
+                // Send the height of the iFrame
+                window.setTimeout(() => {
+                    this.sendIframeHeight();
+                }, 100);
             });
         }
         else {
@@ -12716,6 +12720,12 @@ class iFrame {
                 if (iframe) {
                     if (event.data.hasOwnProperty("frameHeight")) {
                         iframe.style.height = event.data.frameHeight + "px";
+                        if (event.data.frameHeight > 0) {
+                            iframe.classList.add("loaded");
+                        }
+                        else {
+                            iframe.classList.remove("loaded");
+                        }
                     }
                     // Old scroll event logic "scroll", scrolls to correct iframe?
                     else if (event.data.hasOwnProperty("scroll") &&
@@ -12963,10 +12973,10 @@ class InputPlaceholders {
             "input#en__field_supporter_emailAddress": "Email Address",
             "input#en__field_supporter_phoneNumber": "Phone Number (Optional)",
             ".en__mandatory input#en__field_supporter_phoneNumber": "Phone Number",
-            ".required-if-visible input#en__field_supporter_phoneNumber": "Phone Number",
+            ".i-required input#en__field_supporter_phoneNumber": "Phone Number",
             "input#en__field_supporter_phoneNumber2": "000-000-0000 (Optional)",
             ".en__mandatory input#en__field_supporter_phoneNumber2": "000-000-0000",
-            ".required-if-visible input#en__field_supporter_phoneNumber2": "000-000-0000",
+            ".i-required input#en__field_supporter_phoneNumber2": "000-000-0000",
             "input#en__field_supporter_country": "Country",
             "input#en__field_supporter_address1": "Street Address",
             "input#en__field_supporter_address2": "Apt., Ste., Bldg.",
@@ -21356,7 +21366,7 @@ class CheckboxLabel {
 }
 
 ;// ./node_modules/@4site/engrid-scripts/dist/version.js
-const AppVersion = "0.19.20";
+const AppVersion = "0.19.22";
 
 ;// ./node_modules/@4site/engrid-scripts/dist/index.js
  // Runs first so it can change the DOM markup before any markup dependent code fires
