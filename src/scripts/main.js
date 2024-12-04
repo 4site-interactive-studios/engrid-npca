@@ -68,6 +68,4 @@ const runExitIntent = (config) => {
 // Call the initializeExitIntent function with the pageJson object
 initializeExitIntent(pageJson);
 
-
-
 };
