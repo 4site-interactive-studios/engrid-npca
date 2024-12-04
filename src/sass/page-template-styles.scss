@@ -770,4 +770,15 @@
       background-color: #0000ff1a !important;
     }
   }  
+
+  .ExitIntent {
+      --exit-intent__container_width: 500px;
+  }
+
+  @media (min-width: 768px) {
+      .ExitIntent {
+          --exit-intent__container_padding: 50px;
+          --exit-intent__container_scale: 1.2;
+      }     
+  }
 }

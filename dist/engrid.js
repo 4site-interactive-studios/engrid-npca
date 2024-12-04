@@ -17,7 +17,7 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Wednesday, December 4, 2024 @ 13:07:15 ET
+ *  Date: Wednesday, December 4, 2024 @ 18:09:07 ET
  *  By: bryancasler
  *  ENGrid styles: v0.19.20
  *  ENGrid scripts: v0.19.22
@@ -21483,6 +21483,39 @@ const customScript = function (App) {
     });
   }
   addTransactionFeeTooltip();
+  const initializeExitIntent = pageJson => {
+    if (typeof pageJson !== "undefined" && ["premiumgift", "donation"].includes(pageJson.pageType)) {
+      const shouldRun = pageJson.redirectPresent || pageJson.pageNumber < pageJson.pageCount && !pageJson.redirectPresent;
+      if (shouldRun) {
+        const EngridExitIntent = {
+          enabled: true,
+          title: "Did you forget something?",
+          text: "Your support will help NPCA continue to protect and conserve our national parks, ensuring that future generations can experience and enjoy the parks that mean so much to us.",
+          buttonText: "Finish my donation",
+          buttonLink: ".body-main",
+          cookieName: "engrid-exit-intent-lightbox",
+          cookieDuration: 1,
+          triggers: {
+            visibilityState: true,
+            mousePosition: true
+          }
+        };
+
+        // Call the function to initialize or trigger the EngridExitIntent
+        runExitIntent(EngridExitIntent);
+      }
+    }
+  };
+  const runExitIntent = config => {
+    // Logic to initialize or display the exit intent functionality
+    console.log("Exit Intent initialized with configuration:", config);
+
+    // Example logic: Add your implementation here
+    // You can create a modal, track behavior, or interact with the DOM
+  };
+
+  // Call the initializeExitIntent function with the pageJson object
+  initializeExitIntent(pageJson);
 };
 ;// ./src/index.ts
  // Uses ENGrid via NPM
