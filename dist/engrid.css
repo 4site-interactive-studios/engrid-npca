@@ -19,10 +19,10 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Wednesday, December 4, 2024 @ 13:07:15 ET
- *  By: bryancasler
- *  ENGrid styles: v0.19.20
- *  ENGrid scripts: v0.19.22
+ *  Date: Thursday, December 5, 2024 @ 15:33:00 ET
+ *  By: fernando
+ *  ENGrid styles: v0.20.0
+ *  ENGrid scripts: v0.20.2
  *
  *  Created by 4Site Studios
  *  Come work with us or join our team, we would love to hear from you
@@ -7822,6 +7822,15 @@ body[data-engrid-debug]:before{
   --click-to-expand__copy-area_height:193px;
   --click-to-expand__cta-image_height:22px;
   --click-to-expand__cta-image_width:100%;
+}
+[data-engrid-theme=npca] .ExitIntent{
+  --exit-intent__container_width:500px;
+}
+@media (min-width:768px){
+  [data-engrid-theme=npca] .ExitIntent{
+    --exit-intent__container_padding:50px;
+    --exit-intent__container_scale:1.2;
+  }
 }
 [data-engrid-theme=npca]#en__pagebuilder .body-banner,[data-engrid-theme=npca]#en__pagebuilder .body-bannerOverlay,[data-engrid-theme=npca]#en__pagebuilder .body-bottom,[data-engrid-theme=npca]#en__pagebuilder .body-footerOutside,[data-engrid-theme=npca]#en__pagebuilder .body-header,[data-engrid-theme=npca]#en__pagebuilder .content-footerSpacer,[data-engrid-theme=npca]#en__pagebuilder .content-header,[data-engrid-theme=npca]#en__pagebuilder .content-preFooter,[data-engrid-theme=npca]#en__pagebuilder .page-alert,[data-engrid-theme=npca]#en__pagebuilder .page-backgroundImageOverlay{
   display:none !important;

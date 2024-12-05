@@ -184,11 +184,21 @@
   --maximize_my_donation_image: url(https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10104/premium-image.jpeg?v=1731096250000);
 
   --checkbox_color_checked: #ffffff;
-
 }
 
 /* Add your custom theme styles here */
 [data-engrid-theme="npca"] {
+  // Exit Intent Lightbox
+  .ExitIntent {
+    --exit-intent__container_width: 500px;
+  }
+
+  @media (min-width: 768px) {
+    .ExitIntent {
+      --exit-intent__container_padding: 50px;
+      --exit-intent__container_scale: 1.2;
+    }
+  }
 
   /* Hide NPCA unused sections */
   &#en__pagebuilder .page-alert,
@@ -200,7 +210,7 @@
   &#en__pagebuilder .body-footerOutside,
   &#en__pagebuilder .content-footerSpacer,
   &#en__pagebuilder .content-preFooter,
-  &#en__pagebuilder .page-backgroundImageOverlay{
+  &#en__pagebuilder .page-backgroundImageOverlay {
     display: none !important;
   }
 
@@ -377,7 +387,7 @@
       outline: none;
     }
 
-    .en__field__item{
+    .en__field__item {
       padding: 0 !important;
     }
   }
@@ -611,18 +621,19 @@
     }
   }
 
-  input[type=checkbox]+label:before{
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  input[type="checkbox"] + label:before {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+      sans-serif;
   }
 
-  input[type=checkbox]:focus+label:before,
-  input[type=checkbox]:hover+label:before{
+  input[type="checkbox"]:focus + label:before,
+  input[type="checkbox"]:hover + label:before {
     background-color: #fafafa;
     color: #ababab;
     content: var(--checkbox_content_checked);
   }
 
-  input.en__field__input:checked + label:before{
+  input.en__field__input:checked + label:before {
     background-color: #045237;
     color: #ffffff;
   }
@@ -658,7 +669,10 @@
   }
 
   @media screen and (max-width: 879px) {
-    &:not(#en__pagebuilder) .click-to-expand .click-to-expand-text-wrapper>:first-child{
+    &:not(#en__pagebuilder)
+      .click-to-expand
+      .click-to-expand-text-wrapper
+      > :first-child {
       margin-block-start: 1em;
     }
   }
@@ -769,5 +783,5 @@
     .desktop-hide {
       background-color: #0000ff1a !important;
     }
-  }  
+  }
 }
