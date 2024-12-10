@@ -17,8 +17,8 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Monday, December 9, 2024 @ 15:56:55 ET
- *  By: fernando
+ *  Date: Tuesday, December 10, 2024 @ 16:10:14 ET
+ *  By: 4Site
  *  ENGrid styles: v0.20.0
  *  ENGrid scripts: v0.20.2
  *
@@ -21659,33 +21659,39 @@ const AppVersion = "0.20.2";
 // Version
 
 
-// EXTERNAL MODULE: ./node_modules/tippy.js/dist/tippy.esm.js + 54 modules
-var tippy_esm = __webpack_require__(9244);
 ;// ./src/scripts/main.js
 
 const customScript = function (App) {
   // Add your client scripts here
 
   // Transaction fee tooltip
-  function addTransactionFeeTooltip() {
-    const transactionFeeEl = document.querySelector(".transaction-fee-opt-in .en__field__element--checkbox");
-    if (!transactionFeeEl) return;
-    const transactionFeeTooltip = document.createElement("div");
-    transactionFeeTooltip.classList.add("transaction-fee-tooltip");
-    transactionFeeTooltip.innerHTML = "i";
-    transactionFeeEl.appendChild(transactionFeeTooltip);
-    (0,tippy_esm/* default */.Ay)(transactionFeeTooltip, {
-      content: "By checking this box, you agree to cover the transaction fee for your donation. This small additional amount helps us ensure that 100% of you donation goes directly to NPCA.",
-      allowHTML: true,
-      theme: "white",
-      placement: "top",
-      trigger: "mouseenter click",
-      interactive: true,
-      arrow: "<div class='custom-tooltip-arrow'></div>",
-      offset: [0, 20]
-    });
-  }
-  addTransactionFeeTooltip();
+  // Disabled per this request: https://www.bugherd.com/projects/429834/tasks/24
+  // function addTransactionFeeTooltip() {
+  //   const transactionFeeEl = document.querySelector(
+  //     ".transaction-fee-opt-in .en__field__element--checkbox"
+  //   );
+
+  //   if (!transactionFeeEl) return;
+
+  //   const transactionFeeTooltip = document.createElement("div");
+  //   transactionFeeTooltip.classList.add("transaction-fee-tooltip");
+  //   transactionFeeTooltip.innerHTML = "i";
+  //   transactionFeeEl.appendChild(transactionFeeTooltip);
+
+  //   tippy(transactionFeeTooltip, {
+  //     content:
+  //       "By checking this box, you agree to cover the transaction fee for your donation. This small additional amount helps us ensure that 100% of you donation goes directly to NPCA.",
+  //     allowHTML: true,
+  //     theme: "white",
+  //     placement: "top",
+  //     trigger: "mouseenter click",
+  //     interactive: true,
+  //     arrow: "<div class='custom-tooltip-arrow'></div>",
+  //     offset: [0, 20],
+  //   });
+  // }
+
+  // addTransactionFeeTooltip();
 };
 ;// ./src/index.ts
  // Uses ENGrid via NPM
