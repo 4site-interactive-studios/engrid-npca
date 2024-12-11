@@ -725,6 +725,12 @@
     margin-bottom: 0;
   }
 
+  .en__component--formblock.green .en__submit button {
+    --submit__button_background-color: #045237;
+    --submit__button_background-color_hover: #06734e;
+    --submit__button_border-color_hover: var(--submit__button_background-color_hover);
+  }
+
   @mixin until-mobile-l {
     // STYLES
     .en__component--premiumgiftblock .en__pg__description {
