@@ -19,8 +19,8 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Tuesday, December 10, 2024 @ 16:10:14 ET
- *  By: 4Site
+ *  Date: Wednesday, December 11, 2024 @ 17:22:26 ET
+ *  By: fernando
  *  ENGrid styles: v0.20.0
  *  ENGrid scripts: v0.20.2
  *
@@ -7733,11 +7733,11 @@ body[data-engrid-debug]:before{
   --root_font-size:16px;
   --default_font-family:"Gotham", sans-serif;
   --submit__button_color:#fff;
-  --submit__button_background-color:#045237;
+  --submit__button_background-color:#b65916;
   --submit__button_font-size:1.5rem;
   --submit__button_font-weight:700;
   --button_background-color:#7f7266;
-  --button_background-color_hover:var(--color-green);
+  --button_background-color_hover:#af6a18;
   --button_border-radius:5px;
   --recurring-payment__button_background-color_checked:var(--color-green);
   --recurring-payment__button_border-color_checked:var(--color-green);
@@ -7784,6 +7784,10 @@ body[data-engrid-debug]:before{
   --input_border-color:var(--color_dark-gray);
   --give-by-select__button_count:3;
   --give-by-select__button_background-color:#f5f5f5;
+  --give-by-select__button_background-color_hover:var(--color-green);
+  --give-by-select__button_background-color_checked:var(--color-green);
+  --give-by-select__button_border-color_hover:var(--color-green);
+  --give-by-select__button_border-color_checked:var(--color-green);
   --give-by-select__button_border-color:var(--color_dark-gray);
   --give-by-select__button_color:var(--color_dark-gray);
   --give-by-select__button_font-size:1rem;
