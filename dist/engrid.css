@@ -19,7 +19,7 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Thursday, December 12, 2024 @ 14:41:39 ET
+ *  Date: Thursday, December 12, 2024 @ 14:45:49 ET
  *  By: fernando
  *  ENGrid styles: v0.20.0
  *  ENGrid scripts: v0.20.2
@@ -7867,9 +7867,6 @@ body[data-engrid-debug]:before{
   position:relative;
   text-align:left;
   width:90%;
-}
-[data-engrid-theme=npca] .monthly-donation-suggestion.desktop-hide{
-  margin-bottom:15px;
 }
 [data-engrid-theme=npca] .monthly-donation-suggestion.desktop-hide p{
   text-align:center;

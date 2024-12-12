@@ -17,7 +17,7 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Thursday, December 12, 2024 @ 14:41:39 ET
+ *  Date: Thursday, December 12, 2024 @ 14:45:49 ET
  *  By: fernando
  *  ENGrid styles: v0.20.0
  *  ENGrid scripts: v0.20.2
