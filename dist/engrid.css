@@ -19,8 +19,8 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Thursday, December 12, 2024 @ 14:21:52 ET
- *  By: 4Site
+ *  Date: Thursday, December 12, 2024 @ 14:41:39 ET
+ *  By: fernando
  *  ENGrid styles: v0.20.0
  *  ENGrid scripts: v0.20.2
  *
@@ -7852,7 +7852,6 @@ body[data-engrid-debug]:before{
 [data-engrid-theme=npca] .monthly-donation-suggestion{
   display:flex;
   justify-content:center;
-  margin-bottom:10px;
   padding:0;
   position:relative;
   text-align:center;
@@ -7880,27 +7879,27 @@ body[data-engrid-debug]:before{
 }
 [data-engrid-theme=npca] .monthly-donation-suggestion.mobile-hide p{
   padding-right:30px;
-  width:300px;
+  width:305px;
 }
 [data-engrid-theme=npca] .monthly-donation-suggestion.mobile-hide p:after{
   fill:#00704a;
+  bottom:-20px;
   content:url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg' fill='%2300704a'%3E%3Cpath d='M307 34.8c-11.5 5.1-19 16.6-19 29.2v64H176C78.8 128 0 206.8 0 304c0 113.3 81.5 163.9 100.2 174.1 2.5 1.4 5.3 1.9 8.1 1.9 10.9 0 19.7-8.9 19.7-19.7 0-7.5-4.3-14.4-9.8-19.5-9.4-8.9-22.2-26.4-22.2-56.8 0-53 43-96 96-96h96v64c0 12.6 7.4 24.1 19 29.2s25 3 34.4-5.4l160-144c6.7-6.1 10.6-14.7 10.6-23.8s-3.8-17.7-10.6-23.8l-160-144a31.76 31.76 0 0 0-34.4-5.4z'/%3E%3C/svg%3E");
   margin-bottom:0;
   margin-left:8px;
   position:absolute;
   right:10px;
-  top:-30px;
-  transform:scaleX(-1) rotate(-90deg);
+  transform:scaleX(1) rotate(90deg);
   width:40px;
 }
 [data-engrid-theme=npca] .monthly-donation-suggestion.mobile-hide p:before{
   fill:#fff;
+  bottom:-25px;
   content:url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg' fill='%23FFF'%3E%3Cpath d='M307 34.8c-11.5 5.1-19 16.6-19 29.2v64H176C78.8 128 0 206.8 0 304c0 113.3 81.5 163.9 100.2 174.1 2.5 1.4 5.3 1.9 8.1 1.9 10.9 0 19.7-8.9 19.7-19.7 0-7.5-4.3-14.4-9.8-19.5-9.4-8.9-22.2-26.4-22.2-56.8 0-53 43-96 96-96h96v64c0 12.6 7.4 24.1 19 29.2s25 3 34.4-5.4l160-144c6.7-6.1 10.6-14.7 10.6-23.8s-3.8-17.7-10.6-23.8l-160-144a31.76 31.76 0 0 0-34.4-5.4z'/%3E%3C/svg%3E");
   margin-left:8px;
   position:absolute;
   right:5px;
-  top:-35px;
-  transform:scaleX(-1) rotate(-90deg);
+  transform:scaleX(1) rotate(90deg);
   width:52px;
 }
 [data-engrid-theme=npca][data-engrid-visible-frequency="3"] .monthly-donation-suggestion.mobile-hide p{
@@ -7913,12 +7912,12 @@ body[data-engrid-debug]:before{
 [data-engrid-theme=npca][data-engrid-visible-frequency="3"] .monthly-donation-suggestion.mobile-hide p:after{
   left:-10px;
   right:auto;
-  transform:rotate(-90deg);
+  transform:scaleX(-1) rotate(90deg);
 }
 [data-engrid-theme=npca][data-engrid-visible-frequency="3"] .monthly-donation-suggestion.mobile-hide p:before{
   left:-15px;
   right:auto;
-  transform:rotate(-90deg);
+  transform:scaleX(-1) rotate(90deg);
 }
 [data-engrid-theme=npca] .radio-to-buttons_recurrfreq .en__field--recurrfreq.en__field--radio .en__field__item input[type=radio]+label{
   white-space:nowrap;
@@ -8237,7 +8236,9 @@ body[data-engrid-debug]:before{
 [data-engrid-theme=npca] .en__component--formblock.green .en__submit button{
   --submit__button_background-color:#045237;
   --submit__button_background-color_hover:#06734e;
-  --submit__button_border-color_hover:var(--submit__button_background-color_hover);
+  --submit__button_border-color_hover:var(
+    --submit__button_background-color_hover
+  );
 }
 @media (max-width:530px){
   [data-engrid-theme=npca][data-engrid-layout]{
