@@ -19,10 +19,10 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Wednesday, December 11, 2024 @ 17:50:34 ET
- *  By: bryancasler
- *  ENGrid styles: v0.19.20
- *  ENGrid scripts: v0.19.22
+ *  Date: Thursday, December 12, 2024 @ 13:57:06 ET
+ *  By: 4Site
+ *  ENGrid styles: v0.20.0
+ *  ENGrid scripts: v0.20.2
  *
  *  Created by 4Site Studios
  *  Come work with us or join our team, we would love to hear from you
@@ -7814,6 +7814,7 @@ body[data-engrid-debug]:before{
   --premium__image_max-height:100px;
   --maximize_my_donation_image:url(https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10104/premium-image.jpeg?v=1731096250000);
   --checkbox_color_checked:#fff;
+  --engrid__content-footer_margin:var(--engrid__content_margin);
 }
 [data-engrid-theme=npca][data-engrid-visible-frequency="4"]{
   --recurring-frequency__button_count:4;
@@ -8262,6 +8263,92 @@ body[data-engrid-debug]:before{
 }
 [data-engrid-theme=npca] #en__pagebuilder .desktop-hide,[data-engrid-theme=npca] #en__pagebuilder .mobile-hide,[data-engrid-theme=npca][data-engrid-debug] .desktop-hide,[data-engrid-theme=npca][data-engrid-debug] .mobile-hide{
   background-color:rgba(0,0,255,.102) !important;
+}
+[data-engrid-theme=npca] .tippy-box[data-theme~=NPCA]{
+  background-color:var(--engrid__body_background-color);
+  border-radius:0;
+  color:#000;
+  font-size:18px;
+  font-weight:700;
+  max-width:400px !important;
+  padding:15px;
+}
+[data-engrid-theme=npca] .tippy-box[data-theme~=NPCA] .tippy-content{
+  padding:0;
+}
+[data-engrid-theme=npca] .tippy-box[data-theme~=NPCA][data-placement^=top]>.tippy-arrow:before{
+  border-top-color:var(--engrid__body_background-color);
+}
+[data-engrid-theme=npca] .tippy-box[data-theme~=NPCA][data-placement^=bottom]>.tippy-arrow:before{
+  border-bottom-color:var(--engrid__body_background-color);
+}
+[data-engrid-theme=npca] .tippy-box[data-theme~=NPCA][data-placement^=left]>.tippy-arrow:before{
+  border-left-color:var(--engrid__body_background-color);
+}
+[data-engrid-theme=npca] .tippy-box[data-theme~=NPCA][data-placement^=right]>.tippy-arrow:before{
+  border-right-color:var(--engrid__body_background-color);
+}
+[data-engrid-theme=npca] .tippy-box[data-theme~=NPCA][data-placement^=left]>.tippy-arrow{
+  bottom:-15px;
+  right:-8px;
+  top:auto !important;
+  transform:rotate(-90deg) !important;
+}
+[data-engrid-theme=npca] .tippy-box[data-theme~=NPCA] p{
+  margin:10px 0;
+}
+[data-engrid-theme=npca] .tippy-box[data-theme~=NPCA] p:first-of-type{
+  margin-top:0;
+}
+[data-engrid-theme=npca] .tippy-box[data-theme~=NPCA] p:last-of-type{
+  margin-bottom:0;
+}
+@media screen and (min-width:879px){
+  [data-engrid-theme=npca]:not(#en__pagebuilder)[data-engrid-layout=leftleft1col] .page-backgroundImage{
+    grid-column:rpc /  pc;
+    z-index:auto;
+  }
+  [data-engrid-theme=npca]:not(#en__pagebuilder)[data-engrid-layout=leftleft1col] .page-backgroundImage figure.media-with-attribution,[data-engrid-theme=npca]:not(#en__pagebuilder)[data-engrid-layout=leftleft1col] .page-backgroundImage:before{
+    background-position:50% !important;
+    left:680px;
+    right:0;
+    width:calc(100% - 680px);
+  }
+  [data-engrid-theme=npca]:not(#en__pagebuilder)[data-engrid-layout=rightright1col] .page-backgroundImage{
+    grid-column:pc /  lpc;
+    z-index:auto;
+  }
+  [data-engrid-theme=npca]:not(#en__pagebuilder)[data-engrid-layout=rightright1col] .page-backgroundImage figure.media-with-attribution,[data-engrid-theme=npca]:not(#en__pagebuilder)[data-engrid-layout=rightright1col] .page-backgroundImage:before{
+    background-position:50% !important;
+    left:0;
+    right:680px;
+    width:calc(100% - 680px);
+  }
+}
+[data-engrid-theme=npca][data-engrid-page-background=image] .page-backgroundImage figure.media-with-attribution figattribution{
+  --media-attribution__background-color:#fff;
+  --media-attribution__color:#fff;
+  --media-attribution__font-family:serif;
+  --media-attribution__font-size:16px;
+  --media-attribution__padding:0;
+  align-items:center;
+  border-radius:50%;
+  display:flex;
+  height:28px;
+  justify-content:center;
+  line-height:16px;
+  width:28px;
+}
+[data-engrid-theme=npca][data-engrid-page-background=image] .page-backgroundImage figure.media-with-attribution figattribution:before{
+  background-image:url(https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10104/media-attribution.png);
+  background-position:50%;
+  background-repeat:no-repeat;
+  background-size:5px 12px;
+  content:"";
+  height:100%;
+  left:-1px;
+  position:absolute;
+  width:100%;
 }
 body{
   opacity:1;

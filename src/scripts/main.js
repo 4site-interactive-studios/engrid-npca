@@ -1,6 +1,25 @@
 import tippy from "tippy.js";
 
 export const customScript = function (App) {
+
+  const attriubtion = document.querySelector(
+    ".media-with-attribution figattribution"
+  );
+
+  if (attriubtion) {
+    const tippyInstance = attriubtion._tippy;
+    if (tippyInstance) {
+      tippyInstance.setProps({
+        allowHTML: true,
+        theme: "NPCA",
+        placement: "right-end",
+      });
+
+      // Manually show the tooltip
+      // tippyInstance.show();
+    }
+  }
+
   // Add your client scripts here
 
   // Transaction fee tooltip
