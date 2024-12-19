@@ -228,6 +228,7 @@
     grid-column: bc;
     z-index: 3 !important;
   }
+
   .monthly-donation-suggestion {
     display: flex;
     justify-content: center;
@@ -643,37 +644,7 @@
     color: #ffffff;
   }
 
-  @media screen and (min-width: 880px) {
-    &:not(#en__pagebuilder)[data-engrid-layout="leftleft1col"] {
-      .page-backgroundImage {
-        grid-column: rpc/pc;
-
-        &:before,
-        figure.media-with-attribution {
-          left: $one_col_body-column_max-width;
-          right: 0;
-          width: calc(100% - $one_col_body-column_max-width);
-          background-position: center !important;
-        }
-      }
-    }
-
-    &:not(#en__pagebuilder)[data-engrid-layout="rightright1col"] {
-      .page-backgroundImage {
-        grid-column: pc/lpc;
-
-        &:before,
-        figure.media-with-attribution {
-          left: 0;
-          right: $one_col_body-column_max-width;
-          width: calc(100% - $one_col_body-column_max-width);
-          background-position: center !important;
-        }
-      }
-    }
-  }
-
-  @media screen and (max-width: 879px) {
+  @media screen and (max-width: 880px) {
     &:not(#en__pagebuilder)
       .click-to-expand
       .click-to-expand-text-wrapper
@@ -847,11 +818,14 @@
     }
   }
 
-  @media screen and (min-width: 879px) {
+  &:not(#en__pagebuilder) .page-backgroundImage {
+    z-index: auto;
+  }
+
+  @media screen and (min-width: 880px) {
     &:not(#en__pagebuilder)[data-engrid-layout="leftleft1col"] {
       .page-backgroundImage {
         grid-column: rpc/pc;
-        z-index: auto;
 
         &:before,
         figure.media-with-attribution {
@@ -866,7 +840,6 @@
     &:not(#en__pagebuilder)[data-engrid-layout="rightright1col"] {
       .page-backgroundImage {
         grid-column: pc/lpc;
-        z-index: auto;
 
         &:before,
         figure.media-with-attribution {
@@ -878,6 +851,39 @@
       }
     }
   }
+
+  @media screen and (max-width: 880px) {
+    &[data-replace-banner-with-background=if-banner-empty][data-engrid-body-banner=empty][data-engrid-page-background=image] [class*=page-backgroundImage] figure{
+      // align-items: center;
+      // aspect-ratio: auto;
+      // display: flex;
+      position: relative !important;
+
+      figattribution + div[data-tippy-root]{
+        max-width: calc(-62px + 100vw);
+      }
+    }
+  }
+
+  // &[data-replace-banner-with-background=if-banner-empty][data-engrid-body-banner=empty][data-engrid-page-background=image] {[class*=page-backgroundImage] {  
+  //     figure {
+  //       // Change from absolute positioning so that it will have height
+  //       position: relative !important;
+  //       // background-image: none;
+  //       max-height: var(--banner-image-height, 250px);
+  //       display: flex;
+  //       align-items: center;
+  //       aspect-ratio: initial;
+  //     }
+  
+  //     figattribution {
+  //       top: 0;
+  //       bottom: auto;
+  //       display: none;
+  //     }
+  //   }
+  // }  
+
 
   &[data-engrid-page-background="image"]
     .page-backgroundImage

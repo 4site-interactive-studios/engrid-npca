@@ -17,8 +17,8 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Thursday, December 12, 2024 @ 14:45:49 ET
- *  By: fernando
+ *  Date: Thursday, December 19, 2024 @ 09:47:43 ET
+ *  By: 4Site
  *  ENGrid styles: v0.20.0
  *  ENGrid scripts: v0.20.2
  *
@@ -21669,7 +21669,7 @@ const customScript = function (App) {
       tippyInstance.setProps({
         allowHTML: true,
         theme: "NPCA",
-        placement: "right-end"
+        placement: "left-end"
       });
 
       // Manually show the tooltip

@@ -12,7 +12,7 @@ export const customScript = function (App) {
       tippyInstance.setProps({
         allowHTML: true,
         theme: "NPCA",
-        placement: "right-end",
+        placement: "left-end",
       });
 
       // Manually show the tooltip
