@@ -853,19 +853,21 @@
   }
 
   @media screen and (max-width: 880px) {
-    &[data-replace-banner-with-background=if-banner-empty][data-engrid-body-banner=empty][data-engrid-page-background=image] [class*=page-backgroundImage] figure{
+    &[data-replace-banner-with-background="if-banner-empty"][data-engrid-body-banner="empty"][data-engrid-page-background="image"]
+      [class*="page-backgroundImage"]
+      figure {
       // align-items: center;
       // aspect-ratio: auto;
       // display: flex;
       position: relative !important;
 
-      figattribution + div[data-tippy-root]{
+      figattribution + div[data-tippy-root] {
         max-width: calc(-62px + 100vw);
       }
     }
   }
 
-  // &[data-replace-banner-with-background=if-banner-empty][data-engrid-body-banner=empty][data-engrid-page-background=image] {[class*=page-backgroundImage] {  
+  // &[data-replace-banner-with-background=if-banner-empty][data-engrid-body-banner=empty][data-engrid-page-background=image] {[class*=page-backgroundImage] {
   //     figure {
   //       // Change from absolute positioning so that it will have height
   //       position: relative !important;
@@ -875,15 +877,14 @@
   //       align-items: center;
   //       aspect-ratio: initial;
   //     }
-  
+
   //     figattribution {
   //       top: 0;
   //       bottom: auto;
   //       display: none;
   //     }
   //   }
-  // }  
-
+  // }
 
   &[data-engrid-page-background="image"]
     .page-backgroundImage
