@@ -19,7 +19,7 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Monday, April 21, 2025 @ 10:36:02 ET
+ *  Date: Wednesday, June 18, 2025 @ 15:06:31 ET
  *  By: 4Site
  *  ENGrid styles: v0.20.9
  *  ENGrid scripts: v0.20.8
@@ -7702,33 +7702,6 @@ body[data-engrid-debug]:before{
 #en__pagebuilder video[data-src]{
   background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgMzAwIj48cGF0aCBmaWxsPSIjY2NjIiBkPSJNMCAwaDQwMHYzMDBIMHoiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIyNiIgZmlsbD0iIzMzMyI+TGF6eSBMb2FkZWQgVmlkZW88L3RleHQ+PC9zdmc+);
 }
-@font-face{
-  font-display:swap;
-  font-family:Gotham;
-  font-style:700;
-  src:url(https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10104/gotham-bold-webfont.woff2) format("woff2");
-}
-@font-face{
-  font-display:swap;
-  font-family:Gotham;
-  font-style:italic;
-  font-weight:700;
-  src:url(https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10104/gotham-bolditalic-webfont.woff2) format("woff2");
-}
-@font-face{
-  font-display:swap;
-  font-family:Gotham;
-  font-style:normal;
-  font-weight:400;
-  src:url(https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10104/gotham-book-webfont.woff2) format("woff2");
-}
-@font-face{
-  font-display:swap;
-  font-family:Gotham;
-  font-style:italic;
-  font-weight:400;
-  src:url(https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10104/gotham-bookitalic-webfont.woff2) format("woff2");
-}
 [data-engrid-theme=npca]{
   --color-green:#06734e;
   --color-light-green:#e2e98b;
@@ -8347,6 +8320,45 @@ body[data-engrid-debug]:before{
   left:-1px;
   position:absolute;
   width:100%;
+}
+[data-engrid-theme=npca]{
+  --default_font-family:"Gotham SSm A", "Gotham SSm B", sans-serif !important;
+}
+
+[data-engrid-theme]{
+  --input_padding:11.4375px 13.725px !important;
+  --select_padding-right:27.45px !important;
+  --button_padding:11.4375px 13.725px !important;
+  --submit__button_padding-top:17.156px !important;
+  --submit__button_padding-bottom:17.156px !important;
+}
+
+[data-engrid-transaction-recurring-frequency] .radio-to-buttons_donationAmt .en__field--donationAmt div:not(.en__field__item--other) .en__field__label--item:after{
+  margin-left:2.859375px !important;
+}
+
+button.en__ecarditems__prevclose{
+  padding:4.003125px !important;
+}
+
+@media screen and (max-width:600px){
+  [data-engrid-theme=npca]{
+    --media-attribution__margin:14.296875px 17.15625px !important;
+    --media-attribution__padding:14.296875px 17.15625px !important;
+  }
+  .en__additional,.en__ticket{
+    gap:11.4375px !important;
+  }
+  .en__additional__promo:before{
+    margin-bottom:11.4375px !important;
+  }
+}
+[data-engrid-theme=flex2][data-highlight-required-fields] .en__mandatory>label:after{
+  margin-left:2.859375px !important;
+}
+
+[data-engrid-theme=npca] .en__pgList .en__pg__optionType select{
+  --select_padding:13.725px 18.3px !important;
 }
 body{
   opacity:1;

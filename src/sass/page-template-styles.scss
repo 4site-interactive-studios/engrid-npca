@@ -925,3 +925,57 @@
     }
   }
 }
+
+/* CH overrides because Gotham's custom font is not working */
+[data-engrid-theme="npca"] {
+  --default_font-family: "Gotham SSm A", "Gotham SSm B", sans-serif !important;
+}
+
+[data-engrid-theme] {
+  --input_padding: 11.4375px 13.725px !important;
+  --select_padding-right: 27.45px !important;
+  --button_padding: 11.4375px 13.725px !important;
+  --submit__button_padding-top: 17.156px !important;
+  --submit__button_padding-bottom: 17.156px !important;
+}
+
+[data-engrid-transaction-recurring-frequency]
+  .radio-to-buttons_donationAmt
+  .en__field--donationAmt
+  div:not(.en__field__item--other)
+  .en__field__label--item:after {
+  margin-left: 2.859375px !important;
+}
+
+button.en__ecarditems__prevclose {
+  padding: 4.003125px !important;
+}
+
+@media screen and (max-width: 600px) {
+  [data-engrid-theme="npca"] {
+    --media-attribution__margin: 14.296875px 17.15625px !important;
+    --media-attribution__padding: 14.296875px 17.15625px !important;
+  }
+
+  .en__ticket {
+    gap: 11.4375px !important;
+  }
+
+  .en__additional {
+    gap: 11.4375px !important;
+  }
+
+  .en__additional__promo:before {
+    margin-bottom: 11.4375px !important;
+  }
+}
+
+[data-engrid-theme="flex2"][data-highlight-required-fields]
+  .en__mandatory
+  > label:after {
+  margin-left: 2.859375px !important;
+}
+
+[data-engrid-theme="npca"] .en__pgList .en__pg__optionType select {
+  --select_padding: 13.725px 18.3px !important;
+}
