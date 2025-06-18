@@ -19,7 +19,7 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Wednesday, June 18, 2025 @ 15:26:19 ET
+ *  Date: Wednesday, June 18, 2025 @ 15:34:52 ET
  *  By: 4Site
  *  ENGrid styles: v0.20.9
  *  ENGrid scripts: v0.20.8
@@ -7739,27 +7739,27 @@ body[data-engrid-debug]:before{
   --h1_font-family:var(--default_font-family);
   --h1_color:var(--default_color);
   --h1_font-size:3.125rem;
-  --h1_font-weight:700;
+  --h1_font-weight:400;
   --h1_line-height:1.1;
   --h2_font-family:var(--default_font-family);
   --h2_color:var(--default_color);
   --h2_font-size:1.375rem;
-  --h2_font-weight:700;
+  --h2_font-weight:400;
   --h2_line-height:1.35;
   --h3_font-family:var(--default_font-family);
   --h3_color:var(--default_color);
   --h3_font-size:1.125rem;
-  --h3_font-weight:700;
+  --h3_font-weight:400;
   --h3_line-height:1.55;
   --h4_font-family:var(--default_font-family);
   --h4_color:var(--color-light-gray);
   --h4_font-size:1rem;
-  --h4_font-weight:700;
+  --h4_font-weight:400;
   --h4_line-height:1.75;
   --h5_font-family:var(--default_font-family);
   --h5_color:var(--color-light-gray);
   --h5_font-size:0.875rem;
-  --h5_font-weight:700;
+  --h5_font-weight:400;
   --h5_line-height:1.42;
   --h5_text-transform:uppercase;
   --a_color:var(--color-green);
@@ -7775,7 +7775,7 @@ body[data-engrid-debug]:before{
   --give-by-select__button_border-color:var(--color_dark-gray);
   --give-by-select__button_color:var(--color_dark-gray);
   --give-by-select__button_font-size:1rem;
-  --give-by-select__button_font-weight:700;
+  --give-by-select__button_font-weight:400;
   --exit-intent__container_box-shadow:0 2px 4px #06734e;
   --exit-intent__container_outline:5px solid #06734e;
   --exit-intent__button_font-size:1.3rem;
@@ -7968,7 +7968,7 @@ body[data-engrid-debug]:before{
   border-radius:0;
   color:#000;
   font-size:16px;
-  font-weight:700;
+  font-weight:400;
   max-width:300px !important;
   padding:10px;
 }

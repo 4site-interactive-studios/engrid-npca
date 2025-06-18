@@ -49,35 +49,35 @@
   --h1_font-family: var(--default_font-family);
   --h1_color: var(--default_color);
   --h1_font-size: 3.125rem;
-  --h1_font-weight: 700;
+  --h1_font-weight: 400;
   --h1_line-height: 1.1;
 
   // TYPOGRAPHY H2
   --h2_font-family: var(--default_font-family);
   --h2_color: var(--default_color);
   --h2_font-size: 1.375rem;
-  --h2_font-weight: 700;
+  --h2_font-weight: 400;
   --h2_line-height: 1.35;
 
   // TYPOGRAPHY H3
   --h3_font-family: var(--default_font-family);
   --h3_color: var(--default_color);
   --h3_font-size: 1.125rem;
-  --h3_font-weight: 700;
+  --h3_font-weight: 400;
   --h3_line-height: 1.55;
 
   // TYPOGRAPHY H4
   --h4_font-family: var(--default_font-family);
   --h4_color: var(--color-light-gray);
   --h4_font-size: 1rem;
-  --h4_font-weight: 700;
+  --h4_font-weight: 400;
   --h4_line-height: 1.75;
 
   // TYPOGRAPHY H5
   --h5_font-family: var(--default_font-family);
   --h5_color: var(--color-light-gray);
   --h5_font-size: 0.875rem;
-  --h5_font-weight: 700;
+  --h5_font-weight: 400;
   --h5_line-height: 1.42;
   --h5_text-transform: uppercase;
 
@@ -168,7 +168,7 @@
   --give-by-select__button_border-color: var(--color_dark-gray);
   --give-by-select__button_color: var(--color_dark-gray);
   --give-by-select__button_font-size: 1rem;
-  --give-by-select__button_font-weight: 700;
+  --give-by-select__button_font-weight: 400;
 
   // Exit Intent
   --exit-intent__container_box-shadow: 0 2px 4px #06734e;
@@ -403,7 +403,7 @@
     color: #000;
     padding: 10px;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 400;
     max-width: 300px !important;
     border-radius: 0;
     border: 2px solid #7f7266;
