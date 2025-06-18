@@ -937,6 +937,13 @@
   --button_padding: 11.4375px 13.725px !important;
   --submit__button_padding-top: 17.156px !important;
   --submit__button_padding-bottom: 17.156px !important;
+
+  select,
+  select.en__field__input--select,
+  select.en__field__input--splitselect,
+  select.en__field__input--tripleselect {
+    background-position: calc(100% + 13.725px + 0.1875rem);
+  }
 }
 
 [data-engrid-transaction-recurring-frequency]

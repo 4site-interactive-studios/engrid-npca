@@ -19,7 +19,7 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Wednesday, June 18, 2025 @ 15:06:31 ET
+ *  Date: Wednesday, June 18, 2025 @ 15:22:28 ET
  *  By: 4Site
  *  ENGrid styles: v0.20.9
  *  ENGrid scripts: v0.20.8
@@ -8331,6 +8331,9 @@ body[data-engrid-debug]:before{
   --button_padding:11.4375px 13.725px !important;
   --submit__button_padding-top:17.156px !important;
   --submit__button_padding-bottom:17.156px !important;
+}
+[data-engrid-theme] select,[data-engrid-theme] select.en__field__input--select,[data-engrid-theme] select.en__field__input--splitselect,[data-engrid-theme] select.en__field__input--tripleselect{
+  background-position:calc(100% + 13.725px + .1875rem);
 }
 
 [data-engrid-transaction-recurring-frequency] .radio-to-buttons_donationAmt .en__field--donationAmt div:not(.en__field__item--other) .en__field__label--item:after{
