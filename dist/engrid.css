@@ -19,7 +19,7 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Wednesday, June 18, 2025 @ 15:34:52 ET
+ *  Date: Wednesday, June 18, 2025 @ 15:37:26 ET
  *  By: 4Site
  *  ENGrid styles: v0.20.9
  *  ENGrid scripts: v0.20.8
@@ -8183,7 +8183,7 @@ body[data-engrid-debug]:before{
 }
 [data-engrid-theme=npca]:not(#en__pagebuilder) .click-to-expand:not(.expanded) .click-to-expand-cta:after{
   content:"Read More";
-  font-weight:700;
+  font-weight:400;
   left:20px;
   position:relative;
   top:2px;
@@ -8231,7 +8231,7 @@ body[data-engrid-debug]:before{
   border-radius:0;
   color:#000;
   font-size:18px;
-  font-weight:700;
+  font-weight:400;
   max-width:400px !important;
   padding:15px;
 }
