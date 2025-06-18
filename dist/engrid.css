@@ -19,7 +19,7 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Wednesday, June 18, 2025 @ 15:37:26 ET
+ *  Date: Wednesday, June 18, 2025 @ 15:40:45 ET
  *  By: 4Site
  *  ENGrid styles: v0.20.9
  *  ENGrid scripts: v0.20.8
@@ -7762,6 +7762,7 @@ body[data-engrid-debug]:before{
   --h5_font-weight:400;
   --h5_line-height:1.42;
   --h5_text-transform:uppercase;
+  --p_font-weight:300;
   --a_color:var(--color-green);
   --a_text-decoration:none;
   --a_text-decoration_hover:underline;
