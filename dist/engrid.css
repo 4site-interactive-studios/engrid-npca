@@ -19,7 +19,7 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Monday, April 21, 2025 @ 10:36:02 ET
+ *  Date: Wednesday, June 18, 2025 @ 15:40:45 ET
  *  By: 4Site
  *  ENGrid styles: v0.20.9
  *  ENGrid scripts: v0.20.8
@@ -7702,33 +7702,6 @@ body[data-engrid-debug]:before{
 #en__pagebuilder video[data-src]{
   background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgMzAwIj48cGF0aCBmaWxsPSIjY2NjIiBkPSJNMCAwaDQwMHYzMDBIMHoiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIyNiIgZmlsbD0iIzMzMyI+TGF6eSBMb2FkZWQgVmlkZW88L3RleHQ+PC9zdmc+);
 }
-@font-face{
-  font-display:swap;
-  font-family:Gotham;
-  font-style:700;
-  src:url(https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10104/gotham-bold-webfont.woff2) format("woff2");
-}
-@font-face{
-  font-display:swap;
-  font-family:Gotham;
-  font-style:italic;
-  font-weight:700;
-  src:url(https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10104/gotham-bolditalic-webfont.woff2) format("woff2");
-}
-@font-face{
-  font-display:swap;
-  font-family:Gotham;
-  font-style:normal;
-  font-weight:400;
-  src:url(https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10104/gotham-book-webfont.woff2) format("woff2");
-}
-@font-face{
-  font-display:swap;
-  font-family:Gotham;
-  font-style:italic;
-  font-weight:400;
-  src:url(https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10104/gotham-bookitalic-webfont.woff2) format("woff2");
-}
 [data-engrid-theme=npca]{
   --color-green:#06734e;
   --color-light-green:#e2e98b;
@@ -7766,29 +7739,30 @@ body[data-engrid-debug]:before{
   --h1_font-family:var(--default_font-family);
   --h1_color:var(--default_color);
   --h1_font-size:3.125rem;
-  --h1_font-weight:700;
+  --h1_font-weight:400;
   --h1_line-height:1.1;
   --h2_font-family:var(--default_font-family);
   --h2_color:var(--default_color);
   --h2_font-size:1.375rem;
-  --h2_font-weight:700;
+  --h2_font-weight:400;
   --h2_line-height:1.35;
   --h3_font-family:var(--default_font-family);
   --h3_color:var(--default_color);
   --h3_font-size:1.125rem;
-  --h3_font-weight:700;
+  --h3_font-weight:400;
   --h3_line-height:1.55;
   --h4_font-family:var(--default_font-family);
   --h4_color:var(--color-light-gray);
   --h4_font-size:1rem;
-  --h4_font-weight:700;
+  --h4_font-weight:400;
   --h4_line-height:1.75;
   --h5_font-family:var(--default_font-family);
   --h5_color:var(--color-light-gray);
   --h5_font-size:0.875rem;
-  --h5_font-weight:700;
+  --h5_font-weight:400;
   --h5_line-height:1.42;
   --h5_text-transform:uppercase;
+  --p_font-weight:300;
   --a_color:var(--color-green);
   --a_text-decoration:none;
   --a_text-decoration_hover:underline;
@@ -7802,7 +7776,7 @@ body[data-engrid-debug]:before{
   --give-by-select__button_border-color:var(--color_dark-gray);
   --give-by-select__button_color:var(--color_dark-gray);
   --give-by-select__button_font-size:1rem;
-  --give-by-select__button_font-weight:700;
+  --give-by-select__button_font-weight:400;
   --exit-intent__container_box-shadow:0 2px 4px #06734e;
   --exit-intent__container_outline:5px solid #06734e;
   --exit-intent__button_font-size:1.3rem;
@@ -7882,8 +7856,8 @@ body[data-engrid-debug]:before{
   justify-content:flex-end;
 }
 [data-engrid-theme=npca] .monthly-donation-suggestion.mobile-hide p{
-  padding-right:30px;
-  width:305px;
+  padding-right:45px;
+  width:320px;
 }
 [data-engrid-theme=npca] .monthly-donation-suggestion.mobile-hide p:after{
   fill:#00704a;
@@ -7995,7 +7969,7 @@ body[data-engrid-debug]:before{
   border-radius:0;
   color:#000;
   font-size:16px;
-  font-weight:700;
+  font-weight:400;
   max-width:300px !important;
   padding:10px;
 }
@@ -8210,7 +8184,7 @@ body[data-engrid-debug]:before{
 }
 [data-engrid-theme=npca]:not(#en__pagebuilder) .click-to-expand:not(.expanded) .click-to-expand-cta:after{
   content:"Read More";
-  font-weight:700;
+  font-weight:400;
   left:20px;
   position:relative;
   top:2px;
@@ -8258,7 +8232,7 @@ body[data-engrid-debug]:before{
   border-radius:0;
   color:#000;
   font-size:18px;
-  font-weight:700;
+  font-weight:400;
   max-width:400px !important;
   padding:15px;
 }
@@ -8347,6 +8321,48 @@ body[data-engrid-debug]:before{
   left:-1px;
   position:absolute;
   width:100%;
+}
+[data-engrid-theme=npca]{
+  --default_font-family:"Gotham SSm A", "Gotham SSm B", sans-serif !important;
+}
+
+[data-engrid-theme]{
+  --input_padding:11.4375px 13.725px !important;
+  --select_padding-right:27.45px !important;
+  --button_padding:11.4375px 13.725px !important;
+  --submit__button_padding-top:17.156px !important;
+  --submit__button_padding-bottom:17.156px !important;
+}
+[data-engrid-theme] select,[data-engrid-theme] select.en__field__input--select,[data-engrid-theme] select.en__field__input--splitselect,[data-engrid-theme] select.en__field__input--tripleselect{
+  background-position:calc(100% + 13.725px + .1875rem);
+}
+
+[data-engrid-transaction-recurring-frequency] .radio-to-buttons_donationAmt .en__field--donationAmt div:not(.en__field__item--other) .en__field__label--item:after{
+  margin-left:2.859375px !important;
+}
+
+button.en__ecarditems__prevclose{
+  padding:4.003125px !important;
+}
+
+@media screen and (max-width:600px){
+  [data-engrid-theme=npca]{
+    --media-attribution__margin:14.296875px 17.15625px !important;
+    --media-attribution__padding:14.296875px 17.15625px !important;
+  }
+  .en__additional,.en__ticket{
+    gap:11.4375px !important;
+  }
+  .en__additional__promo:before{
+    margin-bottom:11.4375px !important;
+  }
+}
+[data-engrid-theme=flex2][data-highlight-required-fields] .en__mandatory>label:after{
+  margin-left:2.859375px !important;
+}
+
+[data-engrid-theme=npca] .en__pgList .en__pg__optionType select{
+  --select_padding:13.725px 18.3px !important;
 }
 body{
   opacity:1;

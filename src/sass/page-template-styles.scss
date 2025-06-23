@@ -49,35 +49,35 @@
   --h1_font-family: var(--default_font-family);
   --h1_color: var(--default_color);
   --h1_font-size: 3.125rem;
-  --h1_font-weight: 700;
+  --h1_font-weight: 400;
   --h1_line-height: 1.1;
 
   // TYPOGRAPHY H2
   --h2_font-family: var(--default_font-family);
   --h2_color: var(--default_color);
   --h2_font-size: 1.375rem;
-  --h2_font-weight: 700;
+  --h2_font-weight: 400;
   --h2_line-height: 1.35;
 
   // TYPOGRAPHY H3
   --h3_font-family: var(--default_font-family);
   --h3_color: var(--default_color);
   --h3_font-size: 1.125rem;
-  --h3_font-weight: 700;
+  --h3_font-weight: 400;
   --h3_line-height: 1.55;
 
   // TYPOGRAPHY H4
   --h4_font-family: var(--default_font-family);
   --h4_color: var(--color-light-gray);
   --h4_font-size: 1rem;
-  --h4_font-weight: 700;
+  --h4_font-weight: 400;
   --h4_line-height: 1.75;
 
   // TYPOGRAPHY H5
   --h5_font-family: var(--default_font-family);
   --h5_color: var(--color-light-gray);
   --h5_font-size: 0.875rem;
-  --h5_font-weight: 700;
+  --h5_font-weight: 400;
   --h5_line-height: 1.42;
   --h5_text-transform: uppercase;
 
@@ -85,7 +85,7 @@
   // --p_font-family: var(--default_font-family);
   // --p_color: initial;
   // --p_font-size: var(--root_font-size);
-  // --p_font-weight: initial;
+  --p_font-weight: 300;
   // --p_line-height: initial;
 
   // TYPOGRAPHY A
@@ -168,7 +168,7 @@
   --give-by-select__button_border-color: var(--color_dark-gray);
   --give-by-select__button_color: var(--color_dark-gray);
   --give-by-select__button_font-size: 1rem;
-  --give-by-select__button_font-weight: 700;
+  --give-by-select__button_font-weight: 400;
 
   // Exit Intent
   --exit-intent__container_box-shadow: 0 2px 4px #06734e;
@@ -255,8 +255,8 @@
     &.mobile-hide {
       justify-content: flex-end;
       p {
-        width: 305px;
-        padding-right: 30px;
+        width: 320px;
+        padding-right: 45px;
         &::after {
           content: url('data:image/svg+xml,<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="%2300704a"><path d="M307 34.8c-11.5 5.1-19 16.6-19 29.2v64H176C78.8 128 0 206.8 0 304C0 417.3 81.5 467.9 100.2 478.1c2.5 1.4 5.3 1.9 8.1 1.9c10.9 0 19.7-8.9 19.7-19.7c0-7.5-4.3-14.4-9.8-19.5C108.8 431.9 96 414.4 96 384c0-53 43-96 96-96h96v64c0 12.6 7.4 24.1 19 29.2s25 3 34.4-5.4l160-144c6.7-6.1 10.6-14.7 10.6-23.8s-3.8-17.7-10.6-23.8l-160-144c-9.4-8.5-22.9-10.6-34.4-5.4z"></path></svg>');
           width: 40px;
@@ -403,7 +403,7 @@
     color: #000;
     padding: 10px;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 400;
     max-width: 300px !important;
     border-radius: 0;
     border: 2px solid #7f7266;
@@ -686,7 +686,7 @@
         content: "Read More";
         position: relative;
         left: 20px;
-        font-weight: bold;
+        font-weight: 400;
         top: 2px;
       }
     }
@@ -782,7 +782,7 @@
     color: #000;
     padding: 15px;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 400;
     max-width: 400px !important;
     border-radius: 0;
 
@@ -924,4 +924,65 @@
       }
     }
   }
+}
+
+/* CH overrides because Gotham's custom font is not working */
+[data-engrid-theme="npca"] {
+  --default_font-family: "Gotham SSm A", "Gotham SSm B", sans-serif !important;
+}
+
+[data-engrid-theme] {
+  --input_padding: 11.4375px 13.725px !important;
+  --select_padding-right: 27.45px !important;
+  --button_padding: 11.4375px 13.725px !important;
+  --submit__button_padding-top: 17.156px !important;
+  --submit__button_padding-bottom: 17.156px !important;
+
+  select,
+  select.en__field__input--select,
+  select.en__field__input--splitselect,
+  select.en__field__input--tripleselect {
+    background-position: calc(100% + 13.725px + 0.1875rem);
+  }
+}
+
+[data-engrid-transaction-recurring-frequency]
+  .radio-to-buttons_donationAmt
+  .en__field--donationAmt
+  div:not(.en__field__item--other)
+  .en__field__label--item:after {
+  margin-left: 2.859375px !important;
+}
+
+button.en__ecarditems__prevclose {
+  padding: 4.003125px !important;
+}
+
+@media screen and (max-width: 600px) {
+  [data-engrid-theme="npca"] {
+    --media-attribution__margin: 14.296875px 17.15625px !important;
+    --media-attribution__padding: 14.296875px 17.15625px !important;
+  }
+
+  .en__ticket {
+    gap: 11.4375px !important;
+  }
+
+  .en__additional {
+    gap: 11.4375px !important;
+  }
+
+  .en__additional__promo:before {
+    margin-bottom: 11.4375px !important;
+  }
+}
+
+[data-engrid-theme="flex2"][data-highlight-required-fields]
+  .en__mandatory
+  > label:after {
+  margin-left: 2.859375px !important;
+}
+
+[data-engrid-theme="npca"] .en__pgList .en__pg__optionType select {
+  --select_padding: 13.725px 18.3px !important;
 }
