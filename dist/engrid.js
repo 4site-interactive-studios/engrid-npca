@@ -17,8 +17,8 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Wednesday, June 18, 2025 @ 15:40:45 ET
- *  By: 4Site
+ *  Date: Monday, July 21, 2025 @ 10:57:21 ET
+ *  By: michael
  *  ENGrid styles: v0.20.9
  *  ENGrid scripts: v0.20.8
  *
@@ -21845,7 +21845,11 @@ const options = {
   SrcDefer: true,
   ProgressBar: true,
   Debug: App.getUrlParameter("debug") == "true" ? true : false,
-  onLoad: () => customScript(App)
+  onLoad: () => customScript(App),
+  NeverBounceAPI: "public_cf1e44ca6007081517c18fd147362623",
+  NeverBounceDateFormat: "YYYYMMDD",
+  NeverBounceDateField: "supporter.NOT_TAGGED_168",
+  NeverBounceStatusField: "supporter.NOT_TAGGED_169"
   // onResize: () => console.log("Starter Theme Window Resized"),
 };
 new App(options);
