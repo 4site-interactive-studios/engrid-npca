@@ -37,10 +37,10 @@ const options: Options = {
   ProgressBar: true,
   Debug: App.getUrlParameter("debug") == "true" ? true : false,
   onLoad: () => customScript(App),
-  NeverBounceAPI: "public_cf1e44ca6007081517c18fd147362623",
-  NeverBounceDateFormat: "YYYYMMDD",
-  NeverBounceDateField: "supporter.NOT_TAGGED_168",
-  NeverBounceStatusField: "supporter.NOT_TAGGED_169",
+  // NeverBounceAPI: "public_cf1e44ca6007081517c18fd147362623",
+  // NeverBounceDateFormat: "YYYYMMDD",
+  // NeverBounceDateField: "supporter.NOT_TAGGED_168",
+  // NeverBounceStatusField: "supporter.NOT_TAGGED_169",
   // onResize: () => console.log("Starter Theme Window Resized"),
 };
 new App(options);
