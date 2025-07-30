@@ -41,6 +41,6 @@ const options: Options = {
   // NeverBounceDateFormat: "YYYYMMDD",
   // NeverBounceDateField: "supporter.NOT_TAGGED_168",
   // NeverBounceStatusField: "supporter.NOT_TAGGED_169",
-  // onResize: () => console.log("Starter Theme Window Resized"),
+  onResize: () => console.log("Starter Theme Window Resized"),
 };
 new App(options);
