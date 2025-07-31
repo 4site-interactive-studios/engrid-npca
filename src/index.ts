@@ -1,5 +1,5 @@
-import { Options, App } from "@4site/engrid-scripts"; // Uses ENGrid via NPM
-// import { Options, App } from "../../engrid/packages/scripts"; // Uses ENGrid via Visual Studio Workspace
+// import { Options, App } from "@4site/engrid-scripts"; // Uses ENGrid via NPM
+import { Options, App } from "../../engrid/packages/scripts"; // Uses ENGrid via Visual Studio Workspace
 
 import "./sass/main.scss";
 import { customScript } from "./scripts/main";
@@ -37,10 +37,10 @@ const options: Options = {
   ProgressBar: true,
   Debug: App.getUrlParameter("debug") == "true" ? true : false,
   onLoad: () => customScript(App),
-  // NeverBounceAPI: "public_cf1e44ca6007081517c18fd147362623",
-  // NeverBounceDateFormat: "YYYYMMDD",
-  // NeverBounceDateField: "supporter.NOT_TAGGED_168",
-  // NeverBounceStatusField: "supporter.NOT_TAGGED_169",
+  NeverBounceAPI: "public_cf1e44ca6007081517c18fd147362623",
+  NeverBounceDateFormat: "YYYYMMDD",
+  NeverBounceDateField: "supporter.NOT_TAGGED_168",
+  NeverBounceStatusField: "supporter.NOT_TAGGED_169",
   onResize: () => console.log("Starter Theme Window Resized"),
 };
 new App(options);
