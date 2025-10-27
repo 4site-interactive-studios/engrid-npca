@@ -1,7 +1,6 @@
 import tippy from "tippy.js";
 
 export const customScript = function (App) {
-
   const attriubtion = document.querySelector(
     ".media-with-attribution figattribution"
   );
@@ -50,4 +49,11 @@ export const customScript = function (App) {
   // }
 
   // addTransactionFeeTooltip();
+  // Limit the Address Field to 35 Characters which is the limit set by the Vantiv Payment Processor
+  let enFieldAddressLine1 = document.querySelector(
+    "input#en__field_supporter_address1"
+  );
+  if (enFieldAddressLine1) {
+    enFieldAddressLine1.setAttribute("maxlength", "35");
+  }
 };

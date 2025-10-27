@@ -17,7 +17,7 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Monday, September 29, 2025 @ 16:10:59 ET
+ *  Date: Monday, October 27, 2025 @ 00:19:23 ET
  *  By: fernando
  *  ENGrid styles: v0.22.18
  *  ENGrid scripts: v0.22.19
@@ -23105,6 +23105,11 @@ const customScript = function (App) {
   // }
 
   // addTransactionFeeTooltip();
+  // Limit the Address Field to 35 Characters which is the limit set by the Vantiv Payment Processor
+  let enFieldAddressLine1 = document.querySelector("input#en__field_supporter_address1");
+  if (enFieldAddressLine1) {
+    enFieldAddressLine1.setAttribute("maxlength", "35");
+  }
 };
 ;// ./src/index.ts
  // Uses ENGrid via NPM
