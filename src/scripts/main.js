@@ -56,4 +56,44 @@ export const customScript = function (App) {
   if (enFieldAddressLine1) {
     enFieldAddressLine1.setAttribute("maxlength", "35");
   }
+  const transactionGiveBySelect = document.getElementsByName(
+    "transaction.giveBySelect"
+  );
+  const mobilePhoneContainer = document.querySelector(
+    "div.en__field--phoneNumber2"
+  );
+  if (transactionGiveBySelect && mobilePhoneContainer) {
+    // When ACH is selected, Mobile Phone becomes required
+    transactionGiveBySelect.forEach((element) => {
+      element.addEventListener("change", (event) => {
+        const selectedValue = event.target.value;
+        if (selectedValue.toLowerCase() === "ach") {
+          mobilePhoneContainer.classList.add("en__field--required");
+          const mobilePhoneInput = mobilePhoneContainer.querySelector("input");
+          if (mobilePhoneInput) {
+            mobilePhoneInput.setAttribute("required", "true");
+            mobilePhoneInput.setAttribute("aria-required", "true");
+            mobilePhoneInput.setAttribute(
+              "placeholder",
+              mobilePhoneInput
+                .getAttribute("placeholder")
+                .replace(" (Optional)", " (Required)")
+            );
+          }
+        } else {
+          mobilePhoneContainer.classList.remove("en__field--required");
+          const mobilePhoneInput = mobilePhoneContainer.querySelector("input");
+          if (mobilePhoneInput) {
+            mobilePhoneInput.removeAttribute("required");
+            mobilePhoneInput.setAttribute(
+              "placeholder",
+              mobilePhoneInput
+                .getAttribute("placeholder")
+                .replace(" (Required)", " (Optional)")
+            );
+          }
+        }
+      });
+    });
+  }
 };

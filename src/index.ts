@@ -1,5 +1,5 @@
-import { Options, App } from "@4site/engrid-scripts"; // Uses ENGrid via NPM
-// import { Options, App } from "../../engrid/packages/scripts"; // Uses ENGrid via Visual Studio Workspace
+// import { Options, App } from "@4site/engrid-scripts"; // Uses ENGrid via NPM
+import { Options, App } from "../../engrid/packages/scripts"; // Uses ENGrid via Visual Studio Workspace
 
 import "./sass/main.scss";
 import { customScript } from "./scripts/main";
@@ -35,6 +35,9 @@ const options: Options = {
   SkipToMainContentLink: true,
   SrcDefer: true,
   ProgressBar: true,
+  PreferredPaymentMethod: {
+    preferredPaymentMethodField: "supporter.NOT_TAGGED_171",
+  },
   Debug: App.getUrlParameter("debug") == "true" ? true : false,
   onLoad: () => customScript(App),
   // NeverBounceAPI: "public_cf1e44ca6007081517c18fd147362623",

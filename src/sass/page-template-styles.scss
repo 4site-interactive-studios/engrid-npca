@@ -352,6 +352,9 @@
       max-height: 50%;
     }
   }
+  .give-by-select .en__field__item:has(:checked) img:not(.credit-card-logos) {
+    filter: brightness(0) invert(1);
+  }
 
   .give-by-select .venmo label > img:last-of-type {
     height: 20px;
@@ -861,6 +864,7 @@
   }
 
   @media screen and (max-width: 880px) {
+    --recurring-frequency__button_padding: 12px 10px;
     &[data-replace-banner-with-background="if-banner-empty"][data-engrid-body-banner="empty"][data-engrid-page-background="image"]
       [class*="page-backgroundImage"]
       figure {
@@ -923,6 +927,107 @@
         left: -1px;
       }
     }
+  }
+  &[data-engrid-payment-type-option-apple-pay="true"]
+    #en__digitalWallet__stripeButtons__container
+    .__PrivateStripeElement {
+    -webkit-appearance: -apple-pay-button;
+    -apple-pay-button-type: donate;
+    -apple-pay-button-style: black;
+    width: 100% !important;
+    height: 50px !important;
+    iframe {
+      width: 100% !important;
+      height: 50px !important;
+      opacity: 0;
+    }
+  }
+  .upsell-message {
+    border-radius: var(--recurring-frequency__button_border-radius);
+    border: 1px solid var(--color_primary);
+    background-color: #efede1;
+    padding: 10px 15px;
+    margin-bottom: 17px;
+    position: relative;
+    width: 100%;
+
+    > p {
+      font-size: 16px;
+      line-height: 22px;
+      margin: 0;
+      strong {
+        font-weight: 600;
+        color: #333;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background: #efede1;
+      border-top: 1px solid var(--color_primary);
+      border-left: 1px solid var(--color_primary);
+      border-right: 1px solid #efede1;
+      border-bottom: 1px solid #efede1;
+      box-sizing: border-box;
+      top: -6px; // position so the bottom tip touches the top edge
+      left: 75%;
+      transform: translateX(-75%) rotate(45deg); // square turned into a diamond (up arrow)
+    }
+  }
+
+  // Add a Mountain Icon to the Monthly Donation Button
+  .radio-to-buttons_recurrfreq
+    .en__field--recurrfreq.en__field--radio
+    input[type="radio"][value="MONTHLY"]
+    + label:before,
+  .radio-to-buttons_recurrfreq
+    .en__field--recurrfreq.en__field--radio
+    input[type="radio"][value="ANNUAL"]
+    + label:before {
+    display: block;
+    min-width: 0;
+    height: auto;
+    content: ".";
+    color: transparent;
+    width: 20px;
+    // background-image: url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10114/donation-icon_monthly-heart-faded.png?v=1680364166000");
+    // background-image: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.4601 29.6062C14.7301 26.8962 21.7501 28.4162 22.4701 26.1662C23.1901 23.9162 20.6101 21.8762 20.6101 21.8762C20.6101 21.8762 19.6701 19.1862 16.9301 15.1362C14.1901 11.0862 12.3201 4.91622 12.3201 4.91622C12.0701 4.44622 11.6701 4.44622 11.4201 4.91622C11.4201 4.91622 9.90015 7.43622 8.22015 11.0962C7.28015 13.1462 8.04015 15.8662 6.56015 17.6962C4.91015 19.7262 3.13015 25.6162 1.99015 27.4262C0.850149 29.2362 -0.359851 33.4462 0.100149 34.7162C0.360149 35.4362 1.37015 35.4362 1.37015 35.4362H14.8102C14.8102 35.4362 10.1902 32.3262 12.4701 29.6062H12.4601Z" fill="%2300714A"/><path d="M27.9501 29.9863C27.9501 32.0263 23.7001 34.9863 31.3001 35.4363H38.8801C38.8801 35.4363 40.2501 35.4363 39.9601 34.1363C39.7401 33.1463 38.1101 27.6763 35.4801 24.4363C32.8501 21.1963 32.1801 17.8663 30.4801 15.8863C28.7801 13.9063 28.4001 12.1263 28.4001 12.1263C28.1501 11.6763 27.7501 11.6763 27.5001 12.1263C27.5001 12.1263 25.5601 14.2963 25.0501 16.5463C24.5401 18.7963 22.7601 22.4663 22.7601 22.4663C22.7601 22.4663 27.9401 25.6963 27.9401 29.9863H27.9501Z" fill="%2300714A"/></svg>');
+    background-image: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.4601 29.6062C14.7301 26.8962 21.7501 28.4162 22.4701 26.1662C23.1901 23.9162 20.6101 21.8762 20.6101 21.8762C20.6101 21.8762 19.6701 19.1862 16.9301 15.1362C14.1901 11.0862 12.3201 4.91622 12.3201 4.91622C12.0701 4.44622 11.6701 4.44622 11.4201 4.91622C11.4201 4.91622 9.90015 7.43622 8.22015 11.0962C7.28015 13.1462 8.04015 15.8662 6.56015 17.6962C4.91015 19.7262 3.13015 25.6162 1.99015 27.4262C0.850149 29.2362 -0.359851 33.4462 0.100149 34.7162C0.360149 35.4362 1.37015 35.4362 1.37015 35.4362H14.8102C14.8102 35.4362 10.1902 32.3262 12.4701 29.6062H12.4601Z" fill="%23FFFFFF"/><path d="M27.9501 29.9863C27.9501 32.0263 23.7001 34.9863 31.3001 35.4363H38.8801C38.8801 35.4363 40.2501 35.4363 39.9601 34.1363C39.7401 33.1463 38.1101 27.6763 35.4801 24.4363C32.8501 21.1963 32.1801 17.8663 30.4801 15.8863C28.7801 13.9063 28.4001 12.1263 28.4001 12.1263C28.1501 11.6763 27.7501 11.6763 27.5001 12.1263C27.5001 12.1263 25.5601 14.2963 25.0501 16.5463C24.5401 18.7963 22.7601 22.4663 22.7601 22.4663C22.7601 22.4663 27.9401 25.6963 27.9401 29.9863H27.9501Z" fill="%23FFFFFF"/></svg>');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 0.5rem;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: transparent;
+    transition: transform 0.2s;
+    @media screen and (max-width: 400px) {
+      margin-right: 3px;
+      width: 15px;
+    }
+  }
+  // Checked AND HOVER states for the Mountain Icon
+  .radio-to-buttons_recurrfreq
+    .en__field--recurrfreq.en__field--radio
+    input[type="radio"][value="MONTHLY"]
+    + label:hover:before,
+  .radio-to-buttons_recurrfreq
+    .en__field--recurrfreq.en__field--radio
+    input[type="radio"][value="ANNUAL"]
+    + label:hover:before,
+  .radio-to-buttons_recurrfreq
+    .en__field--recurrfreq.en__field--radio
+    input[type="radio"][value="MONTHLY"]:checked
+    + label:before,
+  .radio-to-buttons_recurrfreq
+    .en__field--recurrfreq.en__field--radio
+    input[type="radio"][value="ANNUAL"]:checked
+    + label:before {
+    transform: scale(1.4);
   }
 }
 
