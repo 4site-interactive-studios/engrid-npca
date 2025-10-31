@@ -59,38 +59,23 @@ export const customScript = function (App) {
   const transactionGiveBySelect = document.getElementsByName(
     "transaction.giveBySelect"
   );
-  const mobilePhoneContainer = document.querySelector(
-    "div.en__field--phoneNumber2"
-  );
-  if (transactionGiveBySelect && mobilePhoneContainer) {
+  const phoneContainer = document.querySelector("div.en__field--phoneNumber");
+  if (transactionGiveBySelect && phoneContainer) {
     // When ACH is selected, Mobile Phone becomes required
     transactionGiveBySelect.forEach((element) => {
       element.addEventListener("change", (event) => {
         const selectedValue = event.target.value;
         if (selectedValue.toLowerCase() === "ach") {
-          mobilePhoneContainer.classList.add("en__field--required");
-          const mobilePhoneInput = mobilePhoneContainer.querySelector("input");
-          if (mobilePhoneInput) {
-            mobilePhoneInput.setAttribute("required", "true");
-            mobilePhoneInput.setAttribute("aria-required", "true");
-            mobilePhoneInput.setAttribute(
-              "placeholder",
-              mobilePhoneInput
-                .getAttribute("placeholder")
-                .replace(" (Optional)", " (Required)")
-            );
+          phoneContainer.classList.add("en__field--required");
+          const phoneInput = phoneContainer.querySelector("input");
+          if (phoneInput) {
+            phoneInput.setAttribute("placeholder", "Phone Number (Required)");
           }
         } else {
-          mobilePhoneContainer.classList.remove("en__field--required");
-          const mobilePhoneInput = mobilePhoneContainer.querySelector("input");
-          if (mobilePhoneInput) {
-            mobilePhoneInput.removeAttribute("required");
-            mobilePhoneInput.setAttribute(
-              "placeholder",
-              mobilePhoneInput
-                .getAttribute("placeholder")
-                .replace(" (Required)", " (Optional)")
-            );
+          phoneContainer.classList.remove("en__field--required");
+          const phoneInput = phoneContainer.querySelector("input");
+          if (phoneInput) {
+            phoneInput.setAttribute("placeholder", "Phone Number (Optional)");
           }
         }
       });
