@@ -19,7 +19,7 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Friday, October 31, 2025 @ 00:14:46 ET
+ *  Date: Friday, October 31, 2025 @ 00:21:49 ET
  *  By: fernando
  *  ENGrid styles: v0.22.18
  *  ENGrid scripts: v0.22.19
@@ -8416,18 +8416,14 @@ body[data-engrid-debug]:before{
   width:100% !important;
 }
 [data-engrid-theme=npca] .upsell-message{
+  background-color:#efede1;
+  border:2px solid var(--color_primary);
+  border-radius:var(--recurring-frequency__button_border-radius);
   margin-bottom:17px;
-  padding-right:calc(20% + 40px);
+  margin-top:15px;
+  padding:10px 15px;
   position:relative;
   width:100%;
-}
-@media screen and (max-width:600px){
-  [data-engrid-theme=npca] .upsell-message{
-    padding-right:60px;
-  }
-}
-[data-engrid-theme=npca] .upsell-message .recurring-frequency-y-hide,[data-engrid-theme=npca] .upsell-message .recurring-frequency-y-show{
-  padding:10px 0;
 }
 [data-engrid-theme=npca] .upsell-message>p{
   font-size:16px;
@@ -8447,13 +8443,8 @@ body[data-engrid-debug]:before{
   height:auto;
   position:absolute;
   right:20%;
-  top:-6px;
-  width:40px;
-}
-@media screen and (max-width:600px){
-  [data-engrid-theme=npca] .upsell-message:before{
-    right:25px;
-  }
+  top:-30px;
+  width:33px;
 }
 [data-engrid-theme=npca] .radio-to-buttons_recurrfreq .en__field--recurrfreq.en__field--radio input[type=radio][value=ANNUAL]+label:before,[data-engrid-theme=npca] .radio-to-buttons_recurrfreq .en__field--recurrfreq.en__field--radio input[type=radio][value=MONTHLY]+label:before{
   background-color:initial;
