@@ -38,6 +38,9 @@ const options: Options = {
   PreferredPaymentMethod: {
     preferredPaymentMethodField: "supporter.NOT_TAGGED_171",
   },
+  Placeholders: {
+    "input#en__field_supporter_phoneNumber2": "Mobile Phone",
+  },
   Debug: App.getUrlParameter("debug") == "true" ? true : false,
   onLoad: () => customScript(App),
   // NeverBounceAPI: "public_cf1e44ca6007081517c18fd147362623",
