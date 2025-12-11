@@ -48,5 +48,21 @@ const options: Options = {
   // NeverBounceDateField: "supporter.NOT_TAGGED_168",
   // NeverBounceStatusField: "supporter.NOT_TAGGED_169",
   onResize: () => console.log("Starter Theme Window Resized"),
+  onSubmit: () => {
+    // If the payment type is ACH, change the phone number to number only format
+    const paymentType = App.getPaymentType();
+    if (paymentType === "ACH") {
+      const phoneNumber1 = App.getFieldValue("supporter.phoneNumber");
+      const phoneNumber2 = App.getFieldValue("supporter.phoneNumber2");
+      if (phoneNumber1) {
+        const numberOnly1 = phoneNumber1.replace(/\D/g, "");
+        App.setFieldValue("supporter.phoneNumber", numberOnly1);
+      }
+      if (phoneNumber2) {
+        const numberOnly2 = phoneNumber2.replace(/\D/g, "");
+        App.setFieldValue("supporter.phoneNumber2", numberOnly2);
+      }
+    }
+  },
 };
 new App(options);

@@ -17,7 +17,7 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Thursday, November 13, 2025 @ 23:14:36 ET
+ *  Date: Thursday, December 11, 2025 @ 15:36:56 ET
  *  By: fernando
  *  ENGrid styles: v0.23.0
  *  ENGrid scripts: v0.23.2
@@ -23490,7 +23490,23 @@ const options = {
   // NeverBounceDateFormat: "YYYYMMDD",
   // NeverBounceDateField: "supporter.NOT_TAGGED_168",
   // NeverBounceStatusField: "supporter.NOT_TAGGED_169",
-  onResize: () => console.log("Starter Theme Window Resized")
+  onResize: () => console.log("Starter Theme Window Resized"),
+  onSubmit: () => {
+    // If the payment type is ACH, change the phone number to number only format
+    const paymentType = App.getPaymentType();
+    if (paymentType === "ACH") {
+      const phoneNumber1 = App.getFieldValue("supporter.phoneNumber");
+      const phoneNumber2 = App.getFieldValue("supporter.phoneNumber2");
+      if (phoneNumber1) {
+        const numberOnly1 = phoneNumber1.replace(/\D/g, "");
+        App.setFieldValue("supporter.phoneNumber", numberOnly1);
+      }
+      if (phoneNumber2) {
+        const numberOnly2 = phoneNumber2.replace(/\D/g, "");
+        App.setFieldValue("supporter.phoneNumber2", numberOnly2);
+      }
+    }
+  }
 };
 new App(options);
 })();
