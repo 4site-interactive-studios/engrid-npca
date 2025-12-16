@@ -712,6 +712,10 @@
     );
   }
 
+  .upsell-message .recurring-frequency-y-hide:after{
+    top: -5px !important;
+  }
+
   @mixin until-mobile-l {
     // STYLES
     .en__component--premiumgiftblock .en__pg__description {
@@ -958,10 +962,20 @@ button.en__ecarditems__prevclose {
   padding: 4.003125px !important;
 }
 
+@media screen and (max-width: 530px) {
+  .en__field__item:has([value="MONTHLY"]) {
+    order: 1 !important;
+  }
+}
+
 @media screen and (max-width: 600px) {
   [data-engrid-theme="npca"] {
     --media-attribution__margin: 14.296875px 17.15625px !important;
     --media-attribution__padding: 14.296875px 17.15625px !important;
+    
+    .upsell-message .recurring-frequency-y-hide:after {
+      margin-left: 0px !important;
+    }
   }
 
   .en__ticket {
@@ -974,6 +988,17 @@ button.en__ecarditems__prevclose {
 
   .en__additional__promo:before {
     margin-bottom: 11.4375px !important;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  [data-engrid-theme=npca] .upsell-message .recurring-frequency-y-hide:after{
+    left: -50% !important;
+    top: -18px !important;
+  }
+
+  p.recurring-frequency-y-hide {
+    margin-top: 23px !important;
   }
 }
 
