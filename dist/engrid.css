@@ -19,10 +19,10 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Thursday, December 11, 2025 @ 15:36:56 ET
- *  By: fernando
- *  ENGrid styles: v0.23.0
- *  ENGrid scripts: v0.23.2
+ *  Date: Wednesday, December 17, 2025 @ 00:07:29 ET
+ *  By: cawe
+ *  ENGrid styles: v0.23.4
+ *  ENGrid scripts: v0.23.7
  *
  *  Created by 4Site Studios
  *  Come work with us or join our team, we would love to hear from you
@@ -8280,6 +8280,9 @@ body[data-engrid-debug]:before{
     --submit__button_background-color_hover
   );
 }
+[data-engrid-theme=npca] .upsell-message .recurring-frequency-y-hide:after{
+  top:-5px !important;
+}
 @media (max-width:530px){
   [data-engrid-theme=npca][data-engrid-layout]{
     --h1_font-size:2rem;
@@ -8509,16 +8512,33 @@ button.en__ecarditems__prevclose{
   padding:4.003125px !important;
 }
 
+@media screen and (max-width:530px){
+  .en__field__item:has([value=MONTHLY]){
+    order:1 !important;
+  }
+}
 @media screen and (max-width:600px){
   [data-engrid-theme=npca]{
     --media-attribution__margin:14.296875px 17.15625px !important;
     --media-attribution__padding:14.296875px 17.15625px !important;
+  }
+  .upsell-message .recurring-frequency-y-hide:after{
+    margin-left:0 !important;
   }
   .en__additional,.en__ticket{
     gap:11.4375px !important;
   }
   .en__additional__promo:before{
     margin-bottom:11.4375px !important;
+  }
+}
+@media screen and (min-width:601px){
+  [data-engrid-theme=npca] .upsell-message .recurring-frequency-y-hide:after{
+    left:-50% !important;
+    top:-18px !important;
+  }
+  p.recurring-frequency-y-hide{
+    margin-top:23px !important;
   }
 }
 [data-engrid-theme=flex2][data-highlight-required-fields] .en__mandatory>label:after{
