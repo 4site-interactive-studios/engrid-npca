@@ -1107,13 +1107,14 @@ button.en__ecarditems__prevclose {
 }
 
 @media screen and (min-width: 601px) {
-  [data-engrid-theme="npca"] .upsell-message .recurring-frequency-y-hide:after {
-    left: -50% !important;
-    top: -29px !important;
-  }
-
-  p.recurring-frequency-y-hide {
-    margin-top: 23px !important;
+  [data-engrid-theme="npca"]:has(input[name="transaction.recurrfreq"][value="ANNUAL"]) {
+    .upsell-message .recurring-frequency-y-hide:after {
+      left: -50% !important;
+      top: -29px !important;
+    }
+    p.recurring-frequency-y-hide {
+      margin-top: 23px !important;
+    }
   }
 }
 
