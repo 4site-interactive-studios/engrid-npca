@@ -986,7 +986,7 @@
         top: -10px;
         height: 23px;
         @media screen and (max-width: 600px) {
-          margin-left: 70px;
+          margin-left: calc(75vw - var(--spacing_lg) * 2 - 50px);
         }
       }
     }
@@ -1089,10 +1089,6 @@ button.en__ecarditems__prevclose {
     --media-attribution__padding: 14.296875px 17.15625px !important;
   }
 
-  .upsell-message .recurring-frequency-y-hide:after {
-    margin-left: 0px !important;
-  }
-
   .en__ticket {
     gap: 11.4375px !important;
   }
@@ -1114,6 +1110,16 @@ button.en__ecarditems__prevclose {
     }
     p.recurring-frequency-y-hide {
       margin-top: 23px !important;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  [data-engrid-theme="npca"]:has(input[name="transaction.recurrfreq"][value="ANNUAL"]) {
+    .upsell-message .recurring-frequency-y-hide:after {
+      margin-left: 0 !important;
+    }
+    p.recurring-frequency-y-hide {
+      margin-top: 0 !important;
     }
   }
 }

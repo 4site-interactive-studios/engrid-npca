@@ -19,7 +19,7 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Monday, January 26, 2026 @ 23:34:58 ET
+ *  Date: Thursday, February 12, 2026 @ 14:39:57 ET
  *  By: fernando
  *  ENGrid styles: v0.23.4
  *  ENGrid scripts: v0.23.10
@@ -8459,7 +8459,7 @@ body[data-engrid-debug]:before{
 }
 @media screen and (max-width:600px){
   [data-engrid-theme=npca] .upsell-message .recurring-frequency-y-hide:after{
-    margin-left:70px;
+    margin-left:calc(75vw - var(--spacing_lg)*2 - 50px);
   }
 }
 [data-engrid-theme=npca] .radio-to-buttons_recurrfreq .en__field--recurrfreq.en__field--radio input[type=radio][value=ANNUAL]+label:before,[data-engrid-theme=npca] .radio-to-buttons_recurrfreq .en__field--recurrfreq.en__field--radio input[type=radio][value=MONTHLY]+label:before{
@@ -8522,9 +8522,6 @@ button.en__ecarditems__prevclose{
     --media-attribution__margin:14.296875px 17.15625px !important;
     --media-attribution__padding:14.296875px 17.15625px !important;
   }
-  .upsell-message .recurring-frequency-y-hide:after{
-    margin-left:0 !important;
-  }
   .en__additional,.en__ticket{
     gap:11.4375px !important;
   }
@@ -8539,6 +8536,14 @@ button.en__ecarditems__prevclose{
   }
   [data-engrid-theme=npca]:has(input[name="transaction.recurrfreq"][value=ANNUAL]) p.recurring-frequency-y-hide{
     margin-top:23px !important;
+  }
+}
+@media screen and (max-width:600px){
+  [data-engrid-theme=npca]:has(input[name="transaction.recurrfreq"][value=ANNUAL]) .upsell-message .recurring-frequency-y-hide:after{
+    margin-left:0 !important;
+  }
+  [data-engrid-theme=npca]:has(input[name="transaction.recurrfreq"][value=ANNUAL]) p.recurring-frequency-y-hide{
+    margin-top:0 !important;
   }
 }
 [data-engrid-theme=flex2][data-highlight-required-fields] .en__mandatory>label:after{
