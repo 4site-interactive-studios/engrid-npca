@@ -19,7 +19,7 @@
  *
  *  ENGRID PAGE TEMPLATE ASSETS
  *
- *  Date: Friday, October 2, 2026 @ 12:24:44 ET
+ *  Date: Friday, October 2, 2026 @ 12:26:00 ET
  *  By: pedroluan
  *  ENGrid styles: v0.28.3
  *  ENGrid scripts: v0.28.5
@@ -8777,7 +8777,7 @@ button.en__ecarditems__prevclose{
   .en__field__item:has([value=MONTHLY]),.radio-to-buttons_recurrfreq.annual-default .en__field__item:has([value=ANNUAL]){
     order:1 !important;
   }
-  .recurring-frequency-onetime-show{
+  .recurring-frequency-monthly-hide,.recurring-frequency-onetime-show{
     max-width:200px !important;
   }
 }
