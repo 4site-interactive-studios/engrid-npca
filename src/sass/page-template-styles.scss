@@ -991,6 +991,10 @@
       }
     }
 
+    .recurring-frequency-monthly-hide {
+      flex-direction: column-reverse;
+    }
+
     .recurring-frequency-onetime-show, .recurring-frequency-monthly-hide {
       &::after {
         // Curved arrow pointing up
