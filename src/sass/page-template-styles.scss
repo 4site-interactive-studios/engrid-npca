@@ -1105,10 +1105,10 @@ button.en__ecarditems__prevclose {
     .en__field__item:has([value="ANNUAL"]) {
       order: 1 !important;
     }
+  }
 
-    .recurring-frequency-onetime-show {
-      max-width: 200px !important;
-    }
+  .recurring-frequency-onetime-show {
+    max-width: 200px !important;
   }
 }
 
