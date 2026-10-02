@@ -1005,15 +1005,12 @@
         width: 25px;
         top: -10px;
         height: 23px;
-        @media screen and (max-width: 600px) {
-          margin-left: calc(75vw - var(--spacing_lg) * 2 - 50px);
-        }
       }
     }
   }
 
   // Add a Mountain Icon to the Monthly Donation Button
-  .radio-to-buttons_recurrfreq
+  .radio-to-buttons_recurrfreq:not(.annual-default)
     .en__field--recurrfreq.en__field--radio
     input[type="radio"][value="MONTHLY"]
     + label:before,
@@ -1045,7 +1042,7 @@
     }
   }
   // Checked AND HOVER states for the Mountain Icon
-  .radio-to-buttons_recurrfreq
+  .radio-to-buttons_recurrfreq:not(.annual-default)
     .en__field--recurrfreq.en__field--radio
     input[type="radio"][value="MONTHLY"]
     + label:hover:before,
@@ -1053,7 +1050,7 @@
     .en__field--recurrfreq.en__field--radio
     input[type="radio"][value="ANNUAL"]
     + label:hover:before,
-  .radio-to-buttons_recurrfreq
+  .radio-to-buttons_recurrfreq:not(.annual-default)
     .en__field--recurrfreq.en__field--radio
     input[type="radio"][value="MONTHLY"]:checked
     + label:before,
@@ -1107,6 +1104,10 @@ button.en__ecarditems__prevclose {
   .radio-to-buttons_recurrfreq.annual-default {
     .en__field__item:has([value="ANNUAL"]) {
       order: 1 !important;
+    }
+
+    .recurring-frequency-onetime-show {
+      max-width: 200px !important;
     }
   }
 }
