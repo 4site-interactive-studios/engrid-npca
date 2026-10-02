@@ -991,7 +991,7 @@
       }
     }
 
-    .recurring-frequency-onetime-show {
+    .recurring-frequency-onetime-show, .recurring-frequency-monthly-hide {
       &::after {
         // Curved arrow pointing up
         aspect-ratio: 512 / 466;
