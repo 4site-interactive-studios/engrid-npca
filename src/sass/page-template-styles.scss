@@ -1014,7 +1014,7 @@
     .en__field--recurrfreq.en__field--radio
     input[type="radio"][value="MONTHLY"]
     + label:before,
-  .radio-to-buttons_recurrfreq
+  .radio-to-buttons_recurrfreq:not(.monthly-default)
     .en__field--recurrfreq.en__field--radio
     input[type="radio"][value="ANNUAL"]
     + label:before {
@@ -1046,7 +1046,7 @@
     .en__field--recurrfreq.en__field--radio
     input[type="radio"][value="MONTHLY"]
     + label:hover:before,
-  .radio-to-buttons_recurrfreq
+  .radio-to-buttons_recurrfreq:not(.monthly-default)
     .en__field--recurrfreq.en__field--radio
     input[type="radio"][value="ANNUAL"]
     + label:hover:before,
@@ -1054,7 +1054,7 @@
     .en__field--recurrfreq.en__field--radio
     input[type="radio"][value="MONTHLY"]:checked
     + label:before,
-  .radio-to-buttons_recurrfreq
+  .radio-to-buttons_recurrfreq:not(.monthly-default)
     .en__field--recurrfreq.en__field--radio
     input[type="radio"][value="ANNUAL"]:checked
     + label:before {
